@@ -14,7 +14,7 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 ### 🌱 Currently Learning
- - Building out my [code-encyclopedia](https://github.com/KaitlynParsons/code-encyclopedia) to familiarise myself with:
+ - Building out my [code-encyclopedia](https://github.com/KaitlynParsons/code-encyclopedia) to refresh myself on:
    - design patterns
    - algorithms
    - data structures
