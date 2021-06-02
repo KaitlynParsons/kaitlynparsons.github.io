@@ -18,6 +18,7 @@ Here are some ideas to get you started:
    - design patterns
    - algorithms
    - data structures
+ - Any frameworks or languages that are leading the industry or that I am interested in.
 
 ### 💡 Github Information
 <p align="center">
