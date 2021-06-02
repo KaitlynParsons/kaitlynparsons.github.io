@@ -14,6 +14,8 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+<div align="center">
+
 ### 🌱 Currently Learning
  - Building out my [code-encyclopedia](https://github.com/KaitlynParsons/code-encyclopedia) to refresh myself on:
    - design patterns
@@ -21,12 +23,11 @@ Here are some ideas to get you started:
    - data structures
  - Any frameworks or languages that are leading the industry or that I am interested in.
 
-### 💡 Github Information
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=KaitlynParsons" width="50%">
-  <img src="https://github-readme-stats.vercel.app/api?username=KaitlynParsons&show_icons=true&theme=buefy" width="50%">
-</p>
+### 💡 GitHub Information
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=KaitlynParsons" width="50%">
+<img src="https://github-readme-stats.vercel.app/api?username=KaitlynParsons&show_icons=true&theme=buefy" width="50%">
 
 ### 💌 Get In Touch
 [![Gmail](https://img.shields.io/badge/-GMAIL-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kaitie.98@hotmail.com)
 [![LinkedIn](https://img.shields.io/badge/-LINKEDIN-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kpars/)
+</div>
