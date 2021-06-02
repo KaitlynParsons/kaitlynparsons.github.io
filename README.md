@@ -19,10 +19,10 @@ Here are some ideas to get you started:
    - algorithms
    - data structures
 
-### 💡 Github Stats
+### 💡 Github Information
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=KaitlynParsons">
-  <img src="https://github-readme-stats.vercel.app/api?username=KaitlynParsons&show_icons=true&theme=buefy">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=KaitlynParsons" width="50%">
+  <img src="https://github-readme-stats.vercel.app/api?username=KaitlynParsons&show_icons=true&theme=buefy" width="50%">
 </p>
 
 ### 💌 Get In Touch
