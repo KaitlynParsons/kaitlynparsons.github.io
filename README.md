@@ -17,11 +17,11 @@ Here are some ideas to get you started:
 <div align="center">
 
 ### 🌱 Currently Learning
- - Building out my [code-encyclopedia](https://github.com/KaitlynParsons/code-encyclopedia) to refresh myself on:
-   - design patterns
-   - algorithms
-   - data structures
- - Any frameworks or languages that are leading the industry or that I am interested in.
+Frameworks/languages/databases that are leading the industry or that I am interested in. </br>
+Building out my [code-encyclopedia](https://github.com/KaitlynParsons/code-encyclopedia) to refresh myself on: </br>
+design patterns </br>
+algorithms </br>
+data structures </br>
 
 ### 💡 GitHub Information
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=KaitlynParsons" width="50%">
