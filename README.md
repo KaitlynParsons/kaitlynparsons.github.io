@@ -8,7 +8,7 @@ design patterns </br>
 algorithms </br>
 data structures </br>
 
-### 🤹 Skills
+### 🤹 Skills I Have
 <h5>Languages</h5>
 <img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
 <img alt="TypeScript" src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white"/>
@@ -45,12 +45,6 @@ data structures </br>
 <img alt="GitHub" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/>
 <img alt="Bitbucket" src="https://img.shields.io/badge/bitbucket-%230047B3.svg?style=for-the-badge&logo=bitbucket&logoColor=white"/>
 <img alt="Jest" src="https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white"/>
-
-
-
-### 💡 GitHub Information
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=KaitlynParsons" width="50%">
-<img src="https://github-readme-stats.vercel.app/api?username=KaitlynParsons&show_icons=true&theme=buefy" width="50%">
 
 ### 💌 Get In Touch
 [![Gmail](https://img.shields.io/badge/-GMAIL-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kaitie.98@hotmail.com)
