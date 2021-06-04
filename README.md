@@ -1,5 +1,5 @@
 <div align="center">
-<h1> Hi there, I'm Kaitlyn👋 </h1>
+<h1> Hi, I'm Kaitlyn👋 </h1>
   
 ### 🌱 Currently Learning
 Frameworks/languages/databases that are leading the industry or that I am interested in. </br>
