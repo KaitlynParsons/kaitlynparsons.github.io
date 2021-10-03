@@ -3,10 +3,6 @@
   
 ### 🌱 Currently Learning
 Frameworks/languages/databases that are leading the industry or that I am interested in. </br>
-Building out my [code-encyclopedia](https://github.com/KaitlynParsons/code-encyclopedia) to refresh myself on: </br>
-design patterns </br>
-algorithms </br>
-data structures </br>
 
 ### 🤹 Skills I Have
 <h5>Languages</h5>
@@ -29,13 +25,13 @@ data structures </br>
 <img alt="RxJS" src="https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white" />
 <img alt="Apollo-GraphQL" src="https://img.shields.io/badge/-ApolloGraphQL-311C87?style=for-the-badge&logo=apollo-graphql"/>
 
-
 <h5>Databases</h5>
 <img alt="Postgres" src ="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white"/>
 <img alt="MongoDB" src ="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white"/>
 <img alt="MySQL" src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"/>
 
 <h5>Other</h5>
+<img alt="dbt" src="https://img.shields.io/badge/dbt-0.20.2-red"/>
 <img alt="NodeJS" src="https://img.shields.io/badge/node.js-%2343853D.svg?style=for-the-badge&logo=node-dot-js&logoColor=white"/>
 <img alt="Docker" src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white"/>
 <img alt="Kubernetes" src="https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white"/>
