@@ -1,10 +1,13 @@
 ## Kaitlyn Parsons
 - This repository will represent my digital portfolio/resume.
 - My goal is to try to dedicate 1-2 hours a week into this and expand it using emerging technologies and concepts.
+- Watch this space as a public link will become available when ready :) 
+- In the meantime you can read about my experience on my [LinkedIn](https://www.linkedin.com/in/kpars/).
 
 ### Prerequisites
 - Node
 - Git
+
 
 ### Setup
 1. Npm install
