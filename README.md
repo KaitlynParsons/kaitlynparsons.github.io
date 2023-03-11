@@ -12,6 +12,7 @@
 ### Setup
 1. Npm install
 2. Npm run dev
+3. Go to [http://localhost:5173/](http://localhost:5173/)
 
 ---
 This project was generated with Vites `react-swc-ts` template.
