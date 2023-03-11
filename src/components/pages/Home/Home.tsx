@@ -8,7 +8,7 @@ const Home = () => {
         <Card className='header'>
           <Headline />
         </Card>
-        <Card className="sidebar">Contact Info</Card>
+        <Card className="sidebar">Contact</Card>
         <Card className="content">Experience</Card>
         <Card className="footer">Education</Card>
       </div>
