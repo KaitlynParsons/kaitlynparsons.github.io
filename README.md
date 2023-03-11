@@ -1,5 +1,6 @@
 ## Kaitlyn Parsons
 - This repository will represent my digital portfolio/resume.
+- My goal is to try to dedicate 1-2 hours a week into this and expand it using emerging technologies and concepts.
 
 ### Prerequisites
 - Node
