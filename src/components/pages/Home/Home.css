@@ -1,0 +1,30 @@
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    "hd hd hd"
+    "sd main main"
+    "sd ft ft";
+}
+  
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    grid-template-areas:
+      "hd hd hd"
+      "sd sd sd"
+      "main main main"
+      "ft ft ft";
+  }
+}
+  
+.header {
+  grid-area: hd;
+}
+.footer {
+  grid-area: ft;
+}
+.content {
+  grid-area: main;
+}
+.sidebar {
+  grid-area: sd;
+}

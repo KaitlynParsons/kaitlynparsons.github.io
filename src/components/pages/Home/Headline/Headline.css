@@ -1,0 +1,36 @@
+.logo {
+    padding: 1.5em;
+    margin: auto;
+}
+.logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.headline-grid {
+    display: grid;
+    align-items: center;
+    grid-template-areas:
+      "img h1 h1"
+      "img p p";
+}
+
+@media only screen and (max-width: 768px) {
+    .headline-grid {
+        grid-template-areas:
+          "img"
+          "h1"
+          "p";
+    }
+}
+
+.img-grid-area {
+    grid-area: img;
+}
+
+.h1-grid-area {
+    grid-area: h1;
+}
+
+.p-grid-area {
+    grid-area: p;
+}
