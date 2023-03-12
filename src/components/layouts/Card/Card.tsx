@@ -1,4 +1,4 @@
-import './Card.css';
+import './Card.scss';
 import { AppProps } from '../../../interfaces/AppProps';
 
 const Card = (props: AppProps) => {
