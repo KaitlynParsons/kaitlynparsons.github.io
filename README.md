@@ -1,15 +1,17 @@
 ## Kaitlyn Parsons
-- This repository will represent my digital portfolio/resume.
+- This repository will represent my digital portfolio.
 - My goal is to try to dedicate 1-2 hours a week into this and expand it using emerging technologies and concepts.
-- Watch this space as a public link will become available when ready :) 
+- See the work in progress [here](gh-pages)
 - In the meantime you can read about my experience on my [LinkedIn](https://www.linkedin.com/in/kpars/).
 
-### Prerequisites
+---
+### Development
+#### Prerequisites
 - Node
 - Git
 
 
-### Setup
+#### Setup
 1. Npm install
 2. Npm run dev
 3. Go to [http://localhost:5173/](http://localhost:5173/)
@@ -27,3 +29,5 @@ Useful links:
 [react]: https://reactjs.org/
 [swc]: https://swc.rs/
 [ts]: https://www.typescriptlang.org/
+
+[gh-pages]: https://kaitlynparsons.github.io/KaitlynParsons/
