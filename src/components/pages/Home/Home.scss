@@ -1,5 +1,6 @@
 .wrapper {
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
     "hd hd hd"
     "sd main main"
@@ -8,23 +9,24 @@
   
 @media only screen and (max-width: 768px) {
   .wrapper {
+    grid-template-columns: 1fr;
     grid-template-areas:
-      "hd hd hd"
-      "sd sd sd"
-      "main main main"
-      "ft ft ft";
+      "hd"
+      "main"
+      "ft"
+      "sd";
   }
 }
   
-.header {
+.headline {
   grid-area: hd;
 }
-.footer {
+.education {
   grid-area: ft;
 }
-.content {
+.experience {
   grid-area: main;
 }
-.sidebar {
+.contact {
   grid-area: sd;
 }

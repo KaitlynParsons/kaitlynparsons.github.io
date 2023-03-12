@@ -1,16 +1,25 @@
 import Card from "../../layouts/Card/Card";
+import Contact from "./Contact/Contact";
+import Education from "./Education/Education";
+import Experience from "./Experience/Experience";
 import Headline from "./Headline/Headline";
-import "./Home.css";
+import "./Home.scss";
 
 const Home = () => {
     return (
       <div className="wrapper">
-        <Card className='header'>
+        <Card className='headline'>
           <Headline />
         </Card>
-        <Card className="sidebar">Contact</Card>
-        <Card className="content">Experience</Card>
-        <Card className="footer">Education</Card>
+        <Card className="contact">
+          <Contact />
+        </Card>
+        <Card className="experience">
+          <Experience />
+        </Card>
+        <Card className="education">
+          <Education />
+        </Card>
       </div>
     );
   };
