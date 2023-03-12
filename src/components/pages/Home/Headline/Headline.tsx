@@ -1,5 +1,5 @@
 import icon from "../../../../assets/icon.png";
-import "./Headline.css";
+import "./Headline.scss";
 
 const Headline = () => {
     return (
