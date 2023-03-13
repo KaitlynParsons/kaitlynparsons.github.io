@@ -1,10 +1,10 @@
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 0.5fr 2.5fr;
   grid-template-areas:
-    "hd hd hd"
-    "sd main main"
-    "sd ft ft";
+    "hd hd"
+    "sd main"
+    "sd ft";
 }
   
 @media only screen and (max-width: 768px) {
