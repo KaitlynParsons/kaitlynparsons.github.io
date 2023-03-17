@@ -8,10 +8,11 @@ const GenericCard = ({
   location,
   description,
   link,
+  className
 }: IGenericCardProps): JSX.Element => {
   const { title, subtitle } = headline;
   return (
-    <Card>
+    <Card className={className ? className : ''}>
       <h4>{title}</h4>
       <h5>{subtitle}</h5>
       <p>{duration}</p>

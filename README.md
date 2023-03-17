@@ -30,4 +30,4 @@ Useful links:
 [swc]: https://swc.rs/
 [ts]: https://www.typescriptlang.org/
 
-[gh-pages]: https://kaitlynparsons.github.io/KaitlynParsons/
+[gh-pages]: https://kaitlynparsons.github.io/

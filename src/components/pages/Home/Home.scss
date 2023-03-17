@@ -1,9 +1,10 @@
 .wrapper {
   display: grid;
   grid-template-columns: 0.5fr 2.5fr;
+  column-gap: 1em;
+  row-gap: 1em;
   grid-template-areas:
-    "hd hd"
-    "sd main"
+    "hd main"
     "sd ft";
 }
   

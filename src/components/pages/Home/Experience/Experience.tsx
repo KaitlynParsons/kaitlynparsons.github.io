@@ -88,7 +88,10 @@ const Experience = () => {
   });
   const [pageChanged, setPageChanged] = useState(false);
 
+  const scrollToTopById = (id: string) => document.getElementById(id)?.scrollIntoView();
+
   const newPage = (currentPage: number) => {
+    scrollToTopById('experience');
     const indexOfLastRecord = currentPage * pageState.perPage;
     const indexOfFirstRecord = indexOfLastRecord - pageState.perPage;
     const newList = allExperience.slice(indexOfFirstRecord, indexOfLastRecord);
@@ -110,7 +113,7 @@ const Experience = () => {
         currentPage={pageState.currentPage}
         onPageChange={newPage}
       >
-        <h3>Experience</h3>
+        <h3 id='experience'>Experience</h3>
         {pageState.list.map((exp: IGenericCardProps, index: number) => (
           <GenericCard
             key={index}

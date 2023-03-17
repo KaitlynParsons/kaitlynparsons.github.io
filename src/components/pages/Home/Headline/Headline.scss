@@ -12,17 +12,9 @@
     display: grid;
     align-items: center;
     grid-template-areas:
-      "img h1 h1"
-      "img p p";
-}
-
-@media only screen and (max-width: 768px) {
-    .headline-grid {
-        grid-template-areas:
           "img"
           "h1"
           "p";
-    }
 }
 
 .img-grid-area {

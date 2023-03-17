@@ -1,4 +1,6 @@
-export interface IGenericCardProps {
+import { AppProps } from "./AppProps";
+
+export interface IGenericCardProps extends AppProps {
   headline: {
     title: string;
     subtitle: string;
