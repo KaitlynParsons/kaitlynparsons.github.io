@@ -5,7 +5,7 @@ import Blog from "./components/pages/Blog/Blog";
 import Home from "./components/pages/Home/Home";
 import "./index.scss";
 
-const BASE_PATH = "/";
+const BASE_PATH = "/KaitlynParsons/";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: `${BASE_PATH}/blog`,
+    path: `${BASE_PATH}blog`,
     element: <Blog />
   }
 ]);
