@@ -5,18 +5,21 @@ import Blog from "./components/pages/Blog/Blog";
 import Home from "./components/pages/Home/Home";
 import "./index.scss";
 
-const BASE_PATH = "/KaitlynParsons/";
+const BASE_PATH = "/KaitlynParsons";
 
-const router = createBrowserRouter([
-  {
-    path: BASE_PATH,
-    element: <Home />,
-  },
-  {
-    path: `${BASE_PATH}blog`,
-    element: <Blog />
-  }
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/blog",
+      element: <Blog />,
+    },
+  ],
+  { basename: BASE_PATH }
+);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
