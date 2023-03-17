@@ -6,15 +6,15 @@ import Blog from "./components/pages/Blog/Blog";
 import Home from "./components/pages/Home/Home";
 import "./index.scss";
 
-const BASE_PATH = "/KaitlynParsons";
+const BASE_PATH = "/KaitlynParsons/";
 
 const router = [
     {
-      path: "/",
+      path: "",
       element: <Home />,
     },
     {
-      path: "/blog",
+      path: "blog",
       element: <Blog />,
     },
   ];
@@ -23,8 +23,8 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter basename={BASE_PATH}>
       <Routes>
-        {router.map((route) => (
-          <Route path={route.path} element={route.element} />
+        {router.map((route, index) => (
+          <Route key={index} path={route.path} element={route.element} />
         ))}
       </Routes>
     </BrowserRouter>
