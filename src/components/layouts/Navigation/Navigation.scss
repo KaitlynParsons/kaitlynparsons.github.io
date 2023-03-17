@@ -1,20 +1,20 @@
-.nav-wrapper {
-    display: grid;
-    row-gap: 1em;
-    grid-template-areas:
-    "nav"
-    "content";
-}
+// .nav-wrapper {
+//     display: grid;
+//     row-gap: 1em;
+//     grid-template-areas:
+//     "nav"
+//     "content";
+// }
 
-.nav {
-    display: flex;
-    justify-content: center;
-    column-gap: 1em;
-    background-color: #0a0c37ff;
-    padding: 1em;
-    grid-area: nav;
-}
+// .nav {
+//     display: flex;
+//     justify-content: center;
+//     column-gap: 1em;
+//     background-color: #0a0c37ff;
+//     padding: 1em;
+//     grid-area: nav;
+// }
 
-.content {
-    grid-area: content;
-}
+// .content {
+//     grid-area: content;
+// }
