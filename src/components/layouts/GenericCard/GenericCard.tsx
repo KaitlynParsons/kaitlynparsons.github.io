@@ -18,7 +18,7 @@ const GenericCard = ({
       <p>{duration}</p>
       {location && <p>{location}</p>}
       {description && <p>{description}</p>}
-      {link && <a href={link.url} target="_blank">{link.text}</a>}
+      {link && <a href={link.url} target="_blank" rel='noreferrer'>{link.text}</a>}
     </Card>
   );
 };

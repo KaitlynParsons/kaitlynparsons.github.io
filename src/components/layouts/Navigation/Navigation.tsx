@@ -3,10 +3,7 @@ import "./Navigation.scss";
 
 const Navigation = () => {
   return (
-    <header>
-      <nav></nav>
-      <Outlet />
-    </header>
+      <><nav></nav><Outlet /></>
   );
 };
 

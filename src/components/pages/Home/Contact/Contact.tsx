@@ -1,7 +1,7 @@
 import "./Contact.scss";
-import location from "../../../../assets/home-100.png";
-import github from "../../../../assets/github-100.png";
-import linkedin from "../../../../assets/linkedin-100.png";
+import location from "../../../../assets/home.svg";
+import github from "../../../../assets/github.svg";
+import linkedin from "../../../../assets/linkedin.svg";
 
 const contact = [
     {
@@ -31,7 +31,7 @@ const contact = [
 
 const Contact = () => {
     const contactsForDisplay = contact.map((detail, index) => {
-        const info = detail.href ? <a href={detail.href} target='_blank'>{detail.subtext}</a> : <p>{detail.subtext}</p>;
+        const info = detail.href ? <a href={detail.href} target='_blank' rel='noreferrer'>{detail.subtext}</a> : <p>{detail.subtext}</p>;
         return <div className="row" key={index}><img src={detail.image.link} alt={detail.image.alt} />{info}</div>
     });
 
