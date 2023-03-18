@@ -1,20 +1,18 @@
-// .nav-wrapper {
-//     display: grid;
-//     row-gap: 1em;
-//     grid-template-areas:
-//     "nav"
-//     "content";
-// }
+nav {
+    display: grid;
+    column-gap: 0.5rem;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 0.5rem;
+    justify-content: space-around;
+}
 
-// .nav {
-//     display: flex;
-//     justify-content: center;
-//     column-gap: 1em;
-//     background-color: #0a0c37ff;
-//     padding: 1em;
-//     grid-area: nav;
-// }
+nav > button {
+    background-color: #7c37e8;
+    padding: 1rem;
+    font-weight: bolder;
+    font-size: 1rem;
+}
 
-// .content {
-//     grid-area: content;
-// }
+nav > button:hover {
+    background-color: #c7f459;
+}

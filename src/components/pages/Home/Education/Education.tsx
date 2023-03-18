@@ -1,8 +1,8 @@
-import { IGenericCardProps } from "../../../../interfaces/GenericCardProps";
+import { IGenericCard } from "../../../../interfaces/IGenericCard";
 import GenericCard from "../../../layouts/GenericCard/GenericCard";
 import "./Education.scss";
 
-const education: IGenericCardProps[] = [
+const education: IGenericCard[] = [
   {
     headline: {
       title: "Coursera",
@@ -33,8 +33,8 @@ const education: IGenericCardProps[] = [
 const Education = () => {
   return (
     <div>
-      <h3>Education</h3>
-      {education.map((ed: IGenericCardProps, index: number) => (
+      <h2>Education</h2>
+      {education.map((ed: IGenericCard, index: number) => (
         <GenericCard
           key={index}
           headline={ed.headline}

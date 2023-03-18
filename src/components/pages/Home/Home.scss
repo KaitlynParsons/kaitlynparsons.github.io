@@ -1,8 +1,8 @@
 .wrapper {
   display: grid;
   grid-template-columns: 0.5fr 2.5fr;
-  column-gap: 1em;
-  row-gap: 1em;
+  column-gap: 0.5em;
+  row-gap: 0.5em;
   grid-template-areas:
     "hd main"
     "sd ft";

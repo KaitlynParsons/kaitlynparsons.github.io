@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { IGenericCardProps } from "../../../../interfaces/GenericCardProps";
+import { IGenericCard } from "../../../../interfaces/IGenericCard";
 import GenericCard from "../../../layouts/GenericCard/GenericCard";
 import Pagination from "../../../layouts/Pagination/Pagination";
 import "./Experience.scss";
 
-const experience: IGenericCardProps[] = [
+const experience: IGenericCard[] = [
   {
     headline: { title: "Full Stack Engineer", subtitle: "Findex · Full-time" },
     duration: "Aug 2022 - Present",
@@ -113,8 +113,8 @@ const Experience = () => {
         currentPage={pageState.currentPage}
         onPageChange={newPage}
       >
-        <h3 id='experience'>Experience</h3>
-        {pageState.list.map((exp: IGenericCardProps, index: number) => (
+        <h2 id='experience'>Experience</h2>
+        {pageState.list.map((exp: IGenericCard, index: number) => (
           <GenericCard
             key={index}
             headline={exp.headline}

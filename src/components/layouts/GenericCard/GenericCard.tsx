@@ -1,4 +1,4 @@
-import { IGenericCardProps } from "../../../interfaces/GenericCardProps";
+import { IGenericCard } from "../../../interfaces/IGenericCard";
 import Card from "../Card/Card";
 import "./GenericCard.scss";
 
@@ -9,12 +9,12 @@ const GenericCard = ({
   description,
   link,
   className
-}: IGenericCardProps): JSX.Element => {
+}: IGenericCard): JSX.Element => {
   const { title, subtitle } = headline;
   return (
     <Card className={className ? className : ''}>
-      <h4>{title}</h4>
-      <h5>{subtitle}</h5>
+      <h3>{title}</h3>
+      <h4>{subtitle}</h4>
       <p>{duration}</p>
       {location && <p>{location}</p>}
       {description && <p>{description}</p>}

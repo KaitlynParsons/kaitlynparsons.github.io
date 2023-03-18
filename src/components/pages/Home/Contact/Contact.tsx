@@ -2,8 +2,9 @@ import "./Contact.scss";
 import location from "../../../../assets/home.svg";
 import github from "../../../../assets/github.svg";
 import linkedin from "../../../../assets/linkedin.svg";
+import { IContact } from "../../../../interfaces/IContact";
 
-const contact = [
+const contact: IContact[] = [
     {
         image: {
             link: location,
@@ -16,7 +17,7 @@ const contact = [
             link: github,
             alt: 'github'
         },
-        subtext: 'https://github.com/KaitlynParsons',
+        subtext: 'github.com/KaitlynParsons',
         href: 'https://github.com/KaitlynParsons'
     },
     {
@@ -24,7 +25,7 @@ const contact = [
             link: linkedin,
             alt: 'linkedin'
         },
-        subtext: 'https://www.linkedin.com/in/kpars/',
+        subtext: 'linkedin.com/in/kpars',
         href: 'https://www.linkedin.com/in/kpars/'
     }
 ];
@@ -37,7 +38,7 @@ const Contact = () => {
 
     return (
         <div className="container">
-            <h3>Contact</h3>
+            <h2>Contact</h2>
             {contactsForDisplay}
         </div>
     )
