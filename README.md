@@ -14,7 +14,7 @@
 #### Setup
 1. Npm install
 2. Npm run dev
-3. Go to [http://localhost:5173/](http://localhost:5173/)
+3. Go to [http://localhost:5173](http://localhost:5173)
 
 ---
 This project was generated with Vites `react-swc-ts` template.
@@ -30,4 +30,4 @@ Useful links:
 [swc]: https://swc.rs/
 [ts]: https://www.typescriptlang.org/
 
-[gh-pages]: https://kaitlynparsons.github.io/KaitlynParsons/
+[gh-pages]: https://kaitlynparsons.github.io
