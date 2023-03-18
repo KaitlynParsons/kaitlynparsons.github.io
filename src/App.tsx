@@ -6,7 +6,7 @@ import Home from "./components/pages/Home/Home";
 const App = () => {
     return (
         <Routes>
-            <Route path="/" element={<Navigation />}>
+            <Route element={<Navigation />}>
                 <Route index element={<Home />} />
                 <Route path="blog" element={<Blog />} />
             </Route>
