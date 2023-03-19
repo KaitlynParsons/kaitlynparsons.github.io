@@ -21,8 +21,9 @@ const Navigation = () => {
   return (
     <>
       <nav>
-        <button onClick={() => navigate('')}>Home</button>
+        <button onClick={() => navigate('projects')}>Projects</button>
         <button onClick={() => navigate('blog')}>Blog</button>
+        <button onClick={() => navigate('')}>About</button>
       </nav>
       <Outlet />
     </>

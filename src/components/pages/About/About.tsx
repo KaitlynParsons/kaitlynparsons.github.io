@@ -3,9 +3,9 @@ import Contact from "./Contact/Contact";
 import Education from "./Education/Education";
 import Experience from "./Experience/Experience";
 import Headline from "./Headline/Headline";
-import "./Home.scss";
+import "./About.scss";
 
-const Home = () => {
+const About = () => {
     return (
       <div className="wrapper">
         <Card className='headline'>
@@ -24,4 +24,4 @@ const Home = () => {
     );
   };
   
-  export default Home;
+  export default About;
