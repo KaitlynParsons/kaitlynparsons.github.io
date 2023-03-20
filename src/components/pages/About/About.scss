@@ -1,24 +1,13 @@
 .wrapper {
   display: grid;
-  grid-template-columns: 0.5fr 2.5fr;
   column-gap: 0.5em;
   row-gap: 0.5em;
-  grid-template-areas:
-    "hd main"
-    "sd ft";
-}
-  
-@media only screen and (max-width: 768px) {
-  .wrapper {
-    grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
     grid-template-areas:
       "hd"
       "main"
-      "ft"
-      "sd";
-  }
+      "ft";
 }
-  
 .headline {
   grid-area: hd;
 }
@@ -27,7 +16,4 @@
 }
 .experience {
   grid-area: main;
-}
-.contact {
-  grid-area: sd;
 }

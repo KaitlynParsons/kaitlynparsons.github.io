@@ -1,21 +1,23 @@
 @use '../../../index.scss';
 
 nav {
-    display: grid;
-    column-gap: 0.5rem;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    column-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
     margin-bottom: 0.5rem;
-    justify-content: space-around;
-}
+    margin-right: 0.5rem;
+    justify-content: flex-end;
 
-nav > button {
-    background-color: index.$mono-color-2;
-    color: index.$mono-color-5;
-    padding: 1rem;
-    font-weight: bolder;
-    font-size: 1rem;
-}
+    a {
+        color: index.$mono-color-5;
+        border-bottom: 2px solid;
+        border-image: linear-gradient(30deg, index.$mono-color-3, index.$mono-color-4, index.$mono-color-5 40px) 5;
+        width: 100px;
+        cursor: pointer;
+    }
 
-nav > button:hover {
-    background-color: index.$mono-color-3;
+    a:hover {
+        color: index.$mono-color-3;
+        border-image: linear-gradient(30deg, index.$mono-color-5, index.$mono-color-4, index.$mono-color-3 40px) 5;
+    }
 }

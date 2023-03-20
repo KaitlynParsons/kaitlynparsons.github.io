@@ -21,9 +21,8 @@ const Navigation = () => {
   return (
     <>
       <nav>
-        <button onClick={() => navigate('projects')}>Projects</button>
-        <button onClick={() => navigate('blog')}>Blog</button>
-        <button onClick={() => navigate('')}>About</button>
+        <a onClick={() => navigate('blog')}>Blog</a>
+        <a onClick={() => navigate('')}>About</a>
       </nav>
       <Outlet />
     </>

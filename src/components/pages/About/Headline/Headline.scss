@@ -14,11 +14,12 @@
 
 .headline-grid {
     display: grid;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
     grid-template-areas:
-          "img"
-          "h1"
-          "p";
+          "h1 img"
+          "p img"
+          "links img";
 }
 
 .img-grid-area {
@@ -31,4 +32,29 @@
 
 .p-grid-area {
     grid-area: p;
+}
+
+.links-grid-area {
+    grid-area: links;
+    display: inline-block;
+}
+
+img {
+    width: 3rem;
+    height: 3rem;
+    margin: 0.5em;
+}
+
+a {
+    margin-right: 1rem;
+    color: index.$mono-color-5;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(30deg, index.$mono-color-3, index.$mono-color-4, index.$mono-color-5 40px) 5;
+    width: 100px;
+    cursor: pointer;
+}
+
+a:hover {
+    color: index.$mono-color-3;
+    border-image: linear-gradient(30deg, index.$mono-color-5, index.$mono-color-4, index.$mono-color-3 40px) 5;
 }

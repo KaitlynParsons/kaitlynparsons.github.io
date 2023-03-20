@@ -107,14 +107,14 @@ const Experience = () => {
 
   return (
     <div>
-      <Pagination
+      {/* <Pagination
         perPage={pageState.perPage}
         totalPages={pageState.totalPages}
         currentPage={pageState.currentPage}
         onPageChange={newPage}
-      >
+      > */}
         <h2 id='experience'>Experience</h2>
-        {pageState.list.map((exp: IGenericCard, index: number) => (
+        {allExperience.map((exp: IGenericCard, index: number) => (
           <GenericCard
             key={index}
             headline={exp.headline}
@@ -123,7 +123,7 @@ const Experience = () => {
             link={exp.link}
           />
         ))}
-      </Pagination>
+      {/* </Pagination> */}
     </div>
   );
 };

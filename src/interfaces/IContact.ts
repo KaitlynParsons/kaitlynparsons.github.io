@@ -3,6 +3,5 @@ export interface IContact {
         link: string,
         alt: string
     },
-    subtext: string,
-    href?: string
+    href: string
 }
