@@ -1,11 +1,24 @@
+@use '../../../index.scss';
+
 .btn-container {
     display: block;
 }
 
 .btn-container > button {
     margin: 0.5rem;
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 1rem;
     border-radius: 1rem;
-    background-color: #c7f459;
+    border-width: 0;
+    color: index.$mono-color-5;
+    background-color: index.$mono-color-3;
+
+    &:hover {
+        box-shadow: index.$mono-color-5 3px 3px;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        box-shadow: none;
+    }
 }

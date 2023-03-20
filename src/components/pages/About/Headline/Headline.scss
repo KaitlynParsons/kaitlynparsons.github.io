@@ -1,12 +1,16 @@
+@use '../../../../index';
+
 .logo {
     padding: 1.5em;
     margin: auto;
     width: 100px;
     height: 100px;
+
+    &:hover {
+        filter: drop-shadow(0 0 2em index.$mono-color-5);
+    }
 }
-.logo:hover {
-    filter: drop-shadow(0 0 2em #c7f459);
-}
+
 
 .headline-grid {
     display: grid;

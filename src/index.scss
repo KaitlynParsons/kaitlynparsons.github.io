@@ -1,12 +1,18 @@
+$mono-color-1: #340926;
+$mono-color-2: #510639;
+$mono-color-3: #AE0D7A;
+$mono-color-4: #F033B4;
+$mono-color-5: #FDDEF3;
+
 :root {
   font-family: Tungsten-Bold,arial,georgia,sans-serif;
   line-height: 1.5;
   white-space: pre-line;
   text-align: center;
-  background-color: #292929;
-  color: black;
+  background-color: $mono-color-5;
+  color: $mono-color-5;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 500;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -16,11 +22,11 @@
 
 a {
   font-weight: bolder;
-  color: #c7f459;
+  color: $mono-color-4;
   text-decoration: inherit;
 }
 a:hover {
-  color: #839f39;
+  color: $mono-color-5;
 }
 
 h1 {

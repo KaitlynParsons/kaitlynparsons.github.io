@@ -1,3 +1,5 @@
+@use '../../../index.scss';
+
 nav {
     display: grid;
     column-gap: 0.5rem;
@@ -7,12 +9,13 @@ nav {
 }
 
 nav > button {
-    background-color: #7c37e8;
+    background-color: index.$mono-color-2;
+    color: index.$mono-color-5;
     padding: 1rem;
     font-weight: bolder;
     font-size: 1rem;
 }
 
 nav > button:hover {
-    background-color: #c7f459;
+    background-color: index.$mono-color-3;
 }

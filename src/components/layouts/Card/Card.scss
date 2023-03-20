@@ -1,4 +1,6 @@
+@use '../../../index.scss';
+
 .card {
-    background-color: #7c37e8;
+    background-color: index.$mono-color-2;
     padding: 1em;
 }
