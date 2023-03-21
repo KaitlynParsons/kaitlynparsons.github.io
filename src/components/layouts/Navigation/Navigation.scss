@@ -8,15 +8,6 @@ nav {
     justify-content: flex-end;
 
     a {
-        color: index.$mono-color-5;
-        border-bottom: 2px solid;
-        border-image: linear-gradient(30deg, index.$mono-color-3, index.$mono-color-4, index.$mono-color-5 40px) 5;
         width: 100px;
-        cursor: pointer;
-    }
-
-    a:hover {
-        color: index.$mono-color-3;
-        border-image: linear-gradient(30deg, index.$mono-color-5, index.$mono-color-4, index.$mono-color-3 40px) 5;
     }
 }

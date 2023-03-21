@@ -4,7 +4,7 @@ import "./Experience.scss";
 const experience = [
   {
     company: "Findex",
-    url: "findex.com.au",
+    url: "https://www.findex.com.au",
     timeline: [
       {
         title: "Full Stack Engineer",
@@ -16,7 +16,7 @@ const experience = [
   },
   {
     company: "Paytron",
-    url: "paytron.com",
+    url: "https://www.paytron.com",
     timeline: [
       {
         title: "Software Engineer",
@@ -34,7 +34,7 @@ const experience = [
   },
   {
     company: "Canstar",
-    url: "canstar.com.au",
+    url: "https://www.canstar.com.au",
     timeline: [
       {
         title: "Software Engineer | Technology",
@@ -66,7 +66,7 @@ const experience = [
   },
   {
     company: "In The Code",
-    url: "inthecode.com.au",
+    url: "https://www.inthecode.com.au",
     timeline: [
       {
         title: "Junior Software Developer",
@@ -80,12 +80,10 @@ const experience = [
   }
 ];
 
-// const PAGE_OFFSET = 2;
-
 const Experience = () => {
   const [allExperience] = useState(experience);
   const [selectedCompany, setSelectedCompany] = useState(allExperience[0]);
-  const [companies, setCompanies] = useState(allExperience.map(role => role.company));
+  const [companies] = useState(allExperience.map(role => role.company));
 
   const changeCompany = (selected: string) => {
     const newCompany = allExperience.find(role => role.company === selected);
@@ -104,17 +102,26 @@ const Experience = () => {
       <div>
         <nav>
           {companies.map((company, index) => (
-            <a key={index} onClick={() => changeCompany(company)}>{company}</a>
+            <a
+              className={selectedCompany.company === company ? "active" : ""}
+              key={index}
+              onClick={() => changeCompany(company)}
+            >
+              {company}
+            </a>
           ))}
         </nav>
-        {selectedCompany.timeline.map((role, index) => (
-          <div key={index}>
-            <h4>{role.title}</h4>
-            <label>{role.duration}</label>
-            <p>{role.description}</p>
-          </div>
-        ))}
-        <footer>{selectedCompany.skills}</footer>
+        <div className="padding">
+        <a href={selectedCompany.url} target='_blank'>{selectedCompany.url}</a>
+          {selectedCompany.timeline.map((role, index) => (
+            <div key={index}>
+              <h4>{role.title}</h4>
+              <label>{role.duration}</label>
+              <p>{role.description}</p>
+            </div>
+          ))}
+          {selectedCompany.skills}
+        </div>
       </div>
     </section>
   );

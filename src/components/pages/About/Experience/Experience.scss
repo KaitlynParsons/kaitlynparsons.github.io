@@ -1,8 +1,26 @@
+@use '../../../../index.scss';
+
 section {
     text-align: left;
-
+    box-sizing: border-box;
+    display: inline-block;
+    width: 50%;
+    
+    @media only screen and (max-width: 768px) {
+        width: auto;
+    }
+    
     div {
-        justify-self: center;
+        
+        div.padding {
+            background-color: index.$mono-color-2;
+            padding: 1rem;
+            text-align: right;
+
+            div {
+                text-align: left;
+            }
+        }
     }
 
     h4 {
@@ -19,6 +37,13 @@ section {
     
     nav {
         display: block;
-        justify-content: center;
+        text-align: center;
+        margin: 0;
+
+        a {
+            &.active {
+                color: index.$mono-color-3;
+            }
+        }
     }
 }
