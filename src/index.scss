@@ -22,11 +22,14 @@ $mono-color-5: #FDDEF3;
 
 a {
   font-weight: bolder;
-  color: $mono-color-4;
-  text-decoration: inherit;
+  color: $mono-color-5;
+  border-bottom: 2px solid;
+  text-decoration: none;
+  border-image: linear-gradient(30deg, $mono-color-3, $mono-color-4, $mono-color-5 40px) 5;
 }
 a:hover {
-  color: $mono-color-5;
+  color: $mono-color-3;
+  border-image: linear-gradient(30deg, $mono-color-5, $mono-color-4, $mono-color-3 40px) 5;
 }
 
 h1 {
