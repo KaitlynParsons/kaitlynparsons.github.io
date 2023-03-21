@@ -21,12 +21,8 @@ const experience = [
       {
         title: "Software Engineer",
         duration: "Apr 2022 - Aug 2022 | Full-time",
-        description: `• I worked on a virtual cards program built from scratch in 3 months, 
-        including the ability to upload and delete receipts and supporting documentation to card transactions, 
-        Opensearch queries and aggregations of card data to display to the end user.
-        • Worked on a dashboard redesign, including the use of a third party currency conversion api, 
-        Opensearch queries to display various information to the user about the company and the ability to move and enable/disable 
-        the dashboard components using react grid layout stored in local storage to retain the users layout.
+        description: `• I worked on a virtual cards program built from scratch in 3 months, including the ability to upload and delete receipts and supporting documentation to card transactions, Opensearch queries and aggregations of card data to display to the end user.
+        • Worked on a dashboard redesign, including the use of a third party currency conversion api, Opensearch queries to display various information to the user about the company and the ability to move and enable/disable the dashboard components using react grid layout stored in local storage to retain the users layout.
         • Various bug fixes.`
       }
     ],
@@ -42,9 +38,7 @@ const experience = [
         description: `• Working in an agile team of developers, product owners, quality analysts and scrum master.
         • Apart of technical breakdowns, sprint ceremonies, planning and retrospectives.
         • Contributed to the migration of Canstar verticals from CoffeeScript to GraphQL.
-        • Migrated legacy Equifax api within the credit score microservice to their new and 
-        improved api to securely store credit score and bureau reference on the user profile microservice, 
-        refreshing it on a monthly basis once bureau reference is fetched via a cloud function with cloud scheduler.
+        • Migrated legacy Equifax api within the credit score microservice to their new and improved api to securely store credit score and bureau reference on the user profile microservice, refreshing it on a monthly basis once bureau reference is fetched via a cloud function with cloud scheduler.
         • Assist and upskill junior offshore team members.
         • Introduced unit tests in Jest and Bitbucket pipelines to the user profile microservice.
         • Various bug fixes.`
@@ -53,12 +47,8 @@ const experience = [
         title: "Software Engineer | Commercial",
         duration: "Feb 2020 - Jan 2021 | Full-time",
         description: `• Debug and resolve technical issues for the wider commercial team.
-        • Worked with a team of Data Engineer consultants to migrate a revenue tracking system out of google sheets into BigQuery, 
-        utilizing DBT to perform the calculations and formation of various tables within BigQuery, 
-        Fivetran to sync data from various accounting softwares and internal systems, 
-        Tableau to display the data to the stakeholders and Google Appsheet for the account managers to input numbers to line items at the end of a month.
-        • Developed a Python cloud function to extract clicks and conversions on the website out of a third party marketing software via 
-        their apis into BigQuery on a daily basis for the wider team to perform analytical queries on.
+        • Worked with a team of Data Engineer consultants to migrate a revenue tracking system out of google sheets into BigQuery, utilizing DBT to perform the calculations and formation of various tables within BigQuery, Fivetran to sync data from various accounting softwares and internal systems, Tableau to display the data to the stakeholders and Google Appsheet for the account managers to input numbers to line items at the end of a month.
+        • Developed a Python cloud function to extract clicks and conversions on the website out of a third party marketing software via their apis into BigQuery on a daily basis for the wider team to perform analytical queries on.
         • Developed email alerting tools with GoogleScript and Google triggers.`
       }
     ],
