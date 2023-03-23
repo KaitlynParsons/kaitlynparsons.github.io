@@ -1,4 +1,4 @@
-import icon from "../../../../assets/corgi.png";
+import icon from "../../../../assets/code-merge.svg";
 import { IContact } from "../../../../interfaces/IContact";
 import github from "../../../../assets/github.svg";
 import linkedin from "../../../../assets/linkedin.svg";
