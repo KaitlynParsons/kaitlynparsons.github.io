@@ -57,7 +57,7 @@ const Navigation = () => {
   return (
     <>
       <nav>
-        <a onClick={() => navigate('blog')}>Blog</a>
+        {/* <a onClick={() => navigate('blog')}>Blog</a> */}
         <a onClick={() => navigate('')}>About</a>
       </nav>
       <section className="mainSection">
