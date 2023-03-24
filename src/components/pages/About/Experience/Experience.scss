@@ -1,12 +1,12 @@
 @use '../../../../index.scss';
 
-section {
+.experienceSection {
     text-align: left;
     width: 80%;
     display: inline-block;
     
     @media only screen and (max-width: 768px) {
-        width: auto;
+        width: 100%;
     }
     
     div {

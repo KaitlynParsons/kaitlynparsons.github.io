@@ -1,49 +1,77 @@
-import { IGenericCard } from "../../../../interfaces/IGenericCard";
-import GenericCard from "../../../layouts/GenericCard/GenericCard";
+import { useState } from "react";
 import "./Education.scss";
 
-const education: IGenericCard[] = [
+const education = [
   {
-    headline: {
-      title: "Coursera",
-      subtitle: "Preparing for Google Cloud Certification: Cloud Data Engineer",
-    },
-    duration: "Issued Nov 2021",
-    link: {
-      url: "https://www.coursera.org/account/accomplishments/specialization/certificate/2ECM2VFFWJ2A",
-      text: "Credentials ID 2ECM2VFFWJ2A",
-    },
+    category: "Tertiary",
+    timeline: [
+      {
+        educator: "TAFE Queensland",
+        dateAchieved: "2018",
+        qualification: "Diploma, Software Development"
+      }
+    ]
   },
   {
-    headline: {
-      title: "TAFE Queensland",
-      subtitle: "Diploma, Software Development",
-    },
-    duration: "2018 - 2018",
+    category: "Secondary",
+    timeline: [
+      {
+        educator: "Pine Rivers State High School",
+        dateAchieved: "2016",
+        qualification: "Queensland Certificate of Education"
+      }
+    ]
   },
   {
-    headline: {
-      title: "Pine Rivers State High School",
-      subtitle: "Queensland Certificate of Education",
-    },
-    duration: "Jan 2012 - Nov 2016",
-  },
+    category: "Certificates",
+    timeline: [
+      {
+        educator: "Coursera",
+        dateAchieved: "2021",
+        qualification: "Preparing for Google Cloud Certification: Cloud Data Engineer"
+      }
+    ]
+  }
 ];
 
 const Education = () => {
+  const allEducation = education;
+  const categories = allEducation.map(school => school.category);
+
+  const [selectedCategory, setSelectedCategory] = useState(allEducation[0]);
+
+  const changeCategory = (selected: string) => {
+    const newCategory = allEducation.find(school => school.category === selected);
+    return setSelectedCategory(newCategory!);
+  }
   return (
-    <div>
-      <h2>Education</h2>
-      {education.map((ed: IGenericCard, index: number) => (
-        <GenericCard
-          key={index}
-          headline={ed.headline}
-          duration={ed.duration}
-          description={ed.description}
-          link={ed.link}
-        />
-      ))}
-    </div>
+    <section className="educationSection">
+      <header>
+        <h2>Education</h2>
+      </header>
+      <div>
+        <nav>
+          {categories.map((category, index) => (
+            <a
+              className={selectedCategory.category === category ? "active" : ""}
+              key={index}
+              onClick={() => changeCategory(category)}
+            >
+              {category}
+            </a>
+          ))}
+        </nav>
+        <div className="padding">
+          {selectedCategory.timeline.map((category, index) => (
+            <div key={index}>
+              <h3>{category.educator}</h3>
+              <span>{category.dateAchieved}</span>
+              <p>{category.qualification}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

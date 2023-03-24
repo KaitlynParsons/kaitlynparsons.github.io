@@ -10,7 +10,9 @@
 
 .headline-grid {
     display: grid;
+    max-width: 80%;
     grid-template-columns: 1fr 1fr;
+    margin: auto;
     text-align: left;
     grid-template-areas:
           "h1 img"

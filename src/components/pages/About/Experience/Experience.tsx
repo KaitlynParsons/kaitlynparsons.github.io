@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./Experience.scss";
 
 const experience = [
@@ -72,21 +72,18 @@ const experience = [
 ];
 
 const Experience = () => {
-  const [allExperience] = useState(experience);
+  const allExperience = experience;
+  const companies = allExperience.map(role => role.company);
+
   const [selectedCompany, setSelectedCompany] = useState(allExperience[0]);
-  const [companies] = useState(allExperience.map(role => role.company));
 
   const changeCompany = (selected: string) => {
     const newCompany = allExperience.find(role => role.company === selected);
     return setSelectedCompany(newCompany!);
   }
 
-  useEffect(() => {
-
-  }, []);
-
   return (
-    <section>
+    <section className="experienceSection">
       <header>
         <h2>Experience</h2>
       </header>
