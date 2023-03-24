@@ -106,8 +106,8 @@ const Experience = () => {
         <a href={selectedCompany.url} target='_blank'>{selectedCompany.url}</a>
           {selectedCompany.timeline.map((role, index) => (
             <div key={index}>
-              <h4>{role.title}</h4>
-              <label>{role.duration}</label>
+              <h3>{role.title}</h3>
+              <span>{role.duration}</span>
               <p>{role.description}</p>
             </div>
           ))}

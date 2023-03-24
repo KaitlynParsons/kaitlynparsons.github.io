@@ -26,7 +26,7 @@ section {
         margin-bottom: 0;
     }
 
-    label {
+    span {
         font-size: 0.8rem;
     }
 
@@ -41,7 +41,7 @@ section {
 
         a {
             &.active {
-                color: index.$mono-color-3;
+                color: index.$mono-color-4;
             }
         }
     }
