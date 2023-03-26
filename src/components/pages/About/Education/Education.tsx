@@ -1,5 +1,9 @@
 import { useState } from "react";
 import "./Education.scss";
+import popup from "../../../../assets/popup.svg";
+import diploma from "../../../../assets/diploma.jpg";
+import QCE from "../../../../assets/QCE.jpg";
+import Dialog from "../../../layouts/Dialog/Dialog";
 
 const education = [
   {
@@ -8,9 +12,13 @@ const education = [
       {
         educator: "TAFE Queensland",
         dateAchieved: "2018",
-        qualification: "Diploma, Software Development"
-      }
-    ]
+        qualification: "Diploma, Software Development",
+        verify: {
+          reference: diploma,
+          type: "image",
+        },
+      },
+    ],
   },
   {
     category: "Secondary",
@@ -18,9 +26,13 @@ const education = [
       {
         educator: "Pine Rivers State High School",
         dateAchieved: "2016",
-        qualification: "Queensland Certificate of Education"
-      }
-    ]
+        qualification: "Queensland Certificate of Education",
+        verify: {
+          reference: QCE,
+          type: "image",
+        },
+      },
+    ],
   },
   {
     category: "Certificates",
@@ -28,22 +40,48 @@ const education = [
       {
         educator: "Coursera",
         dateAchieved: "2021",
-        qualification: "Preparing for Google Cloud Certification: Cloud Data Engineer"
-      }
-    ]
-  }
+        qualification:
+          "Preparing for Google Cloud Certification: Cloud Data Engineer",
+        verify: {
+          reference:
+            "https://www.coursera.org/account/accomplishments/professional-cert/2ECM2VFFWJ2A",
+          type: "link",
+        },
+      },
+    ],
+  },
 ];
 
 const Education = () => {
   const allEducation = education;
-  const categories = allEducation.map(school => school.category);
+  const categories = allEducation.map((school) => school.category);
 
   const [selectedCategory, setSelectedCategory] = useState(allEducation[0]);
+  const [showDialog, setShowDialog] = useState(false);
 
-  const changeCategory = (selected: string) => {
-    const newCategory = allEducation.find(school => school.category === selected);
-    return setSelectedCategory(newCategory!);
+  const openDialog = () => {
+    setShowDialog(true);
+    window.scrollTo({top: 0, behavior: "smooth"});
   }
+
+  const changeCategory = (selected: string): void => {
+    const newCategory = allEducation.find(
+      (school) => school.category === selected
+    );
+    return setSelectedCategory(newCategory!);
+  };
+
+  const openVerification = (verify: { type: string; reference: string }) => {
+    switch (verify.type) {
+      case "link":
+        return window.open(verify.reference, "_blank", "rel=noreferrer");
+      case "image":
+        return openDialog();
+      default:
+        return;
+    }
+  };
+
   return (
     <section className="educationSection">
       <header>
@@ -64,9 +102,26 @@ const Education = () => {
         <div className="padding">
           {selectedCategory.timeline.map((category, index) => (
             <div key={index}>
+              {category.verify.type !== "image" && (
+                <a onClick={() => openVerification(category.verify)}>
+                  <img src={popup} alt={category.educator} />
+                </a>
+              )}
               <h3>{category.educator}</h3>
               <span>{category.dateAchieved}</span>
               <p>{category.qualification}</p>
+              <>
+                {showDialog && (
+                  <div>
+                    <Dialog
+                      title={category.qualification}
+                      image={category.verify.reference}
+                      isOpen={showDialog}
+                      onClose={setShowDialog}
+                    />
+                  </div>
+                )}
+              </>
             </div>
           ))}
         </div>
