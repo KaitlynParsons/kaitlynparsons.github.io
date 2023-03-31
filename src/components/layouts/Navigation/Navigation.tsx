@@ -58,7 +58,7 @@ const Navigation = () => {
     <div className="margin-lr">
       <nav>
         {/* <a onClick={() => navigate('blog')}>Blog</a> */}
-        <a onClick={() => navigate('')}>About</a>
+        <a onClick={() => navigate('about')}>About</a>
       </nav>
       <section className="mainSection">
         <Outlet />
