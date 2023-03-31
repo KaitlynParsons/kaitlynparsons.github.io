@@ -3,8 +3,6 @@ import "./Education.scss";
 import popup from "../../../../assets/popup.svg";
 import diploma from "../../../../assets/diploma.jpg";
 import QCE from "../../../../assets/QCE.jpg";
-import Dialog from "../../../layouts/Dialog/Dialog";
-
 const education = [
   {
     category: "Tertiary",
@@ -57,12 +55,6 @@ const Education = () => {
   const categories = allEducation.map((school) => school.category);
 
   const [selectedCategory, setSelectedCategory] = useState(allEducation[0]);
-  const [showDialog, setShowDialog] = useState(false);
-
-  const openDialog = () => {
-    setShowDialog(true);
-    window.scrollTo({top: 0, behavior: "smooth"});
-  }
 
   const changeCategory = (selected: string): void => {
     const newCategory = allEducation.find(
@@ -91,26 +83,12 @@ const Education = () => {
         <div className="padding">
           {selectedCategory.timeline.map((category, index) => (
             <div key={index}>
-              {category.verify.type !== "image" && (
-                <a href={category.verify.reference} target="_blank">
-                  <img src={popup} alt={category.educator} />
-                </a>
-              )}
+              <a href={category.verify.reference} target="_blank">
+                <img src={popup} alt={category.educator} />
+              </a>
               <h3>{category.educator}</h3>
               <span>{category.dateAchieved}</span>
               <p>{category.qualification}</p>
-              <>
-                {showDialog && (
-                  <div>
-                    <Dialog
-                      title={category.qualification}
-                      image={category.verify.reference}
-                      isOpen={showDialog}
-                      onClose={setShowDialog}
-                    />
-                  </div>
-                )}
-              </>
             </div>
           ))}
         </div>
