@@ -2,18 +2,14 @@
 
 .experienceSection {
     text-align: left;
-    width: 80%;
+    width: 100%;
     display: inline-block;
-    
-    @media only screen and (max-width: 768px) {
-        width: 100%;
-    }
     
     div {
         
         div.padding {
             background-color: index.$mono-color-2;
-            padding: 1rem;
+            padding: 1em;
             text-align: right;
 
             div {
@@ -27,7 +23,7 @@
     }
 
     span {
-        font-size: 0.8rem;
+        font-size: 0.8em;
     }
 
     h2, a {
@@ -37,9 +33,9 @@
     nav {
         display: block;
         text-align: center;
-        margin-right: 0;
-
+        
         a {
+            margin: 0 0.25em 0 0.25em;
             &.active {
                 color: index.$mono-color-4;
             }

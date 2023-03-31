@@ -10,7 +10,6 @@
 
 .headline-grid {
     display: grid;
-    max-width: 80%;
     grid-template-columns: 1fr 1fr;
     margin: auto;
     text-align: left;
@@ -38,13 +37,12 @@
 }
 
 img {
-    width: 3rem;
-    height: 3rem;
+    width: 3em;
+    height: 3em;
     margin: 0.5em;
 }
 
 a {
-    margin-right: 1rem;
     color: index.$mono-color-5;
     border-bottom: 2px solid;
     border-image: linear-gradient(30deg, index.$mono-color-3, index.$mono-color-4, index.$mono-color-5 40px) 5;

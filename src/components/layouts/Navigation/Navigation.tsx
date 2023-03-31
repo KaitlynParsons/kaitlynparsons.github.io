@@ -55,7 +55,7 @@ const Navigation = () => {
   }, [navigateState]);
 
   return (
-    <>
+    <div className="margin-lr">
       <nav>
         {/* <a onClick={() => navigate('blog')}>Blog</a> */}
         <a onClick={() => navigate('')}>About</a>
@@ -66,7 +66,7 @@ const Navigation = () => {
       <footer>
           {contactsForDisplay}
       </footer>
-    </>
+    </div>
   );
 };
 
