@@ -4,7 +4,7 @@ import "./Navigation.scss";
 import { IContact } from "../../../interfaces/IContact";
 import github from "../../../assets/github.svg";
 import linkedin from "../../../assets/linkedin.svg";
-import email from "../../../assets/email.svg";
+// import email from "../../../assets/email.svg";
 
 const contact: IContact[] = [
   {

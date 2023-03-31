@@ -71,17 +71,6 @@ const Education = () => {
     return setSelectedCategory(newCategory!);
   };
 
-  const openVerification = (verify: { type: string; reference: string }) => {
-    switch (verify.type) {
-      case "link":
-        return window.open(verify.reference, "_blank", "rel=noreferrer");
-      case "image":
-        return openDialog();
-      default:
-        return;
-    }
-  };
-
   return (
     <section className="educationSection">
       <header>
@@ -103,7 +92,7 @@ const Education = () => {
           {selectedCategory.timeline.map((category, index) => (
             <div key={index}>
               {category.verify.type !== "image" && (
-                <a onClick={() => openVerification(category.verify)}>
+                <a href={category.verify.reference} target="_blank">
                   <img src={popup} alt={category.educator} />
                 </a>
               )}
