@@ -1,4 +1,6 @@
-import { IBlog } from "../../../interfaces/IBlog";
+import { useEffect, useState } from "react";
+import { blogDateFormatter } from "../../../helpers/DateHelper";
+import { IArticle, IBlog } from "../../../interfaces/IBlog";
 import "./Blog.scss";
 
 const blogs: IBlog[] = [
@@ -6,27 +8,51 @@ const blogs: IBlog[] = [
         category: 'Technology',
         articles: [
             {
-                title: '',
-                date: new Date(),
-                content: ''
+                title: 'Useful Packages',
+                date: blogDateFormatter('2023-04-07'),
+                content: `
+                <a href='https://moment.github.io/luxon/#/' target='_blank'>luxon</a>
+                `
             }
         ]
     },
     {
         category: 'Health & Fitness',
         articles: [
-            {
-                title: '',
-                date: new Date(),
-                content: ''
-            }
+            // {
+            //     title: '',
+            //     date: blogDateFormatter('2023-04-07'),
+            //     content: ''
+            // }
         ]
     },
 ]
 
 const Blog = () => {
-    return <>
+    const [allArticles, setAllArticles] = useState<IArticle[]>([]);
 
+    const getAllArticles = async () => {
+        const articles: IArticle[] = [];
+        blogs.map(blog => articles.push(...blog.articles));
+        setAllArticles(articles);
+    }
+
+    useEffect(() => {
+        getAllArticles();
+    }, []);
+
+    return <>
+        {
+            allArticles.map((article, index) => {
+                return (
+                    <div className="blog-article" key={index}>
+                        <h4>{article.title}</h4>
+                        <span>{article.date}</span>
+                        <div dangerouslySetInnerHTML={{ __html: article.content }} />
+                    </div>
+                )
+            })
+        }
     </>
 };
 
