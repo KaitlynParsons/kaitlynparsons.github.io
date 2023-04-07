@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./Experience.scss";
+import { IExperience } from "../../../../interfaces/IExperience";
 
-const experience = [
+const experience: IExperience[] = [
   {
     company: "Findex",
     url: "https://www.findex.com.au",
