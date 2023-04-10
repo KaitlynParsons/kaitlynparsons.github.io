@@ -11,7 +11,7 @@ const TabCard = (props: ITabCard) => {
             <nav>
                 {props.nav}
             </nav>
-            <div className="padding">
+            <div className="content">
                 {props.content}
             </div>
         </div>

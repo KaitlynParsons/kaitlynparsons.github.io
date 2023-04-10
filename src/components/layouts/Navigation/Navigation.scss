@@ -7,9 +7,32 @@
         display: flex;
         column-gap: 1em;
         margin-block: auto;
+
+        a {
+            background-color: index.$mono-color-2;
+            color: index.$mono-color-5;
+            border: 0.1em solid index.$mono-color-5;
+            padding: 0.25em;
+            border-radius: 1em;
+            box-shadow: 0.5em 0.5em index.$mono-color-5;
+        }
+
+        a:hover {
+            color: index.$mono-color-4;
+            box-shadow: -0.5em -0.5em index.$mono-color-4;
+            border: 0.1em solid index.$mono-color-4;
+        }
     }
     h1 {
         margin: 0;
+    }
+
+    h1::after {
+        content: 'Kaitlyn Parsons';
+
+        @media only screen and (max-width: 768px) {
+            content: 'KP';
+        }
     }
 }
 
@@ -21,7 +44,7 @@
     margin: 0 5em 0 5em;
 
     @media only screen and (max-width: 768px) {
-        margin: 0;
+        margin: 0 0.5em 0 0.5em;
     }
 
     footer {
