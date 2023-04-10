@@ -3,6 +3,7 @@ import "./Education.scss";
 import popup from "../../../../assets/popup.svg";
 import diploma from "../../../../assets/diploma.jpg";
 import QCE from "../../../../assets/QCE.jpg";
+import TabCard from "../../../layouts/TabCard/TabCard";
 const education = [
   {
     category: "Tertiary",
@@ -64,36 +65,38 @@ const Education = () => {
   };
 
   return (
-    <section className="educationSection">
-      <header>
-        <h2>Education</h2>
-      </header>
-      <div>
-        <nav>
-          {categories.map((category, index) => (
-            <a
-              className={selectedCategory.category === category ? "active" : ""}
-              key={index}
-              onClick={() => changeCategory(category)}
-            >
-              {category}
-            </a>
-          ))}
-        </nav>
-        <div className="padding">
-          {selectedCategory.timeline.map((category, index) => (
-            <div key={index}>
-              <a href={category.verify.reference} target="_blank">
-                <img src={popup} alt={category.educator} />
+      <TabCard
+        title="Education"
+        nav={
+          <>
+            {categories.map((category, index) => (
+              <a
+                className={
+                  selectedCategory.category === category ? "active" : ""
+                }
+                key={index}
+                onClick={() => changeCategory(category)}
+              >
+                {category}
               </a>
-              <h3>{category.educator}</h3>
-              <span>{category.dateAchieved}</span>
-              <p>{category.qualification}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+            ))}
+          </>
+        }
+        content={
+          <>
+            {selectedCategory.timeline.map((category, index) => (
+              <div key={index}>
+                <a href={category.verify.reference} target="_blank">
+                  <img src={popup} alt={category.educator} />
+                </a>
+                <h3>{category.educator}</h3>
+                <span>{category.dateAchieved}</span>
+                <p>{category.qualification}</p>
+              </div>
+            ))}
+          </>
+        }
+      />
   );
 };
 

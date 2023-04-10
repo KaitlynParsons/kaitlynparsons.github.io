@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Experience.scss";
 import { IExperience } from "../../../../interfaces/IExperience";
+import TabCard from "../../../layouts/TabCard/TabCard";
 
 const experience: IExperience[] = [
   {
@@ -84,35 +85,37 @@ const Experience = () => {
   }
 
   return (
-    <section className="experienceSection">
-      <header>
-        <h2>Experience</h2>
-      </header>
-      <div>
-        <nav>
-          {companies.map((company, index) => (
-            <a
-              className={selectedCompany.company === company ? "active" : ""}
-              key={index}
-              onClick={() => changeCompany(company)}
-            >
-              {company}
+      <TabCard
+        title="Experience"
+        nav={
+          <>
+            {companies.map((company, index) => (
+              <a
+                className={selectedCompany.company === company ? "active" : ""}
+                key={index}
+                onClick={() => changeCompany(company)}
+              >
+                {company}
+              </a>
+            ))}
+          </>
+        }
+        content={
+          <>
+            <a href={selectedCompany.url} target="_blank">
+              {selectedCompany.url}
             </a>
-          ))}
-        </nav>
-        <div className="padding">
-        <a href={selectedCompany.url} target='_blank'>{selectedCompany.url}</a>
-          {selectedCompany.timeline.map((role, index) => (
-            <div key={index}>
-              <h3>{role.title}</h3>
-              <span>{role.duration}</span>
-              <p>{role.description}</p>
-            </div>
-          ))}
-          {selectedCompany.skills}
-        </div>
-      </div>
-    </section>
+            {selectedCompany.timeline.map((role, index) => (
+              <div key={index}>
+                <h3>{role.title}</h3>
+                <span>{role.duration}</span>
+                <p>{role.description}</p>
+              </div>
+            ))}
+            {selectedCompany.skills}
+          </>
+        }
+      />
   );
 };
 
