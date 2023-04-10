@@ -1,29 +1,43 @@
 import { RouterProvider, createHashRouter } from "react-router-dom";
 import Navigation from "./components/layouts/Navigation/Navigation";
-import Blog from "./components/pages/Blog/Blog";
 import ReactGA from "react-ga4";
-import About from "./components/pages/About/About";
 import { useEffect } from "react";
+import React from "react";
+
+const About = React.lazy(() => import("./components/pages/About/About"));
+const Blog = React.lazy(() => import("./components/pages/Blog/Blog"));
 
 const router = createHashRouter([
-    {
-        path: '/',
-        element: <Navigation />,
-        children: [
-            {
-                path: '',
-                element: <About />
-            },
-            {
-                path: 'about',
-                element: <About />
-            },
-            {
-                path: 'blog',
-                element: <Blog />
-            }
-        ]
-    }
+  {
+    path: "/",
+    element: <Navigation />,
+    children: [
+      {
+        path: "",
+        element: (
+          <React.Suspense fallback={<>Loading...</>}>
+            <About />
+          </React.Suspense>
+        ),
+      },
+      {
+        path: "about",
+        element: (
+            <React.Suspense fallback={<>Loading...</>}>
+              <About />
+            </React.Suspense>
+          ),
+      },
+      {
+        path: "blog",
+        element: (
+            <React.Suspense fallback={<>Loading...</>}>
+              <Blog />
+            </React.Suspense>
+          ),
+      },
+    ],
+  },
 ]);
 
 const App = () => {
