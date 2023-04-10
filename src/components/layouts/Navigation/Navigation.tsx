@@ -56,10 +56,13 @@ const Navigation = () => {
 
   return (
     <div className="margin-lr">
-      <nav>
-        {/* <a onClick={() => navigate('blog')}>Blog</a> */}
-        <a onClick={() => navigate('about')}>About</a>
-      </nav>
+      <header className="navHeading">
+        <h2>Kaitlyn Parsons</h2>
+        <nav>
+          {/* <a onClick={() => navigate('blog')}>Blog</a> */}
+          <a onClick={() => navigate('about')}>About</a>
+        </nav>
+      </header>
       <section className="mainSection">
         <Outlet />
       </section>

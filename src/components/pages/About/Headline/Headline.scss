@@ -13,27 +13,15 @@
     grid-template-columns: 1fr 1fr;
     margin: auto;
     text-align: left;
-    grid-template-areas:
-          "h1 img"
-          "p img"
-          "links img";
+    grid-template-areas: "p img";
 }
 
 .img-grid-area {
     grid-area: img;
 }
 
-.h1-grid-area {
-    grid-area: h1;
-}
-
 .p-grid-area {
     grid-area: p;
-}
-
-.links-grid-area {
-    grid-area: links;
-    display: inline-block;
 }
 
 img {
@@ -43,14 +31,6 @@ img {
 }
 
 a {
-    color: index.$mono-color-5;
-    border-bottom: 2px solid;
-    border-image: linear-gradient(30deg, index.$mono-color-3, index.$mono-color-4, index.$mono-color-5 40px) 5;
     width: 100px;
     cursor: pointer;
-}
-
-a:hover {
-    color: index.$mono-color-3;
-    border-image: linear-gradient(30deg, index.$mono-color-5, index.$mono-color-4, index.$mono-color-3 40px) 5;
 }

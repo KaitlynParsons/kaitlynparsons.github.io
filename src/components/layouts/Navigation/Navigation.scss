@@ -1,9 +1,13 @@
 @use '../../../index.scss';
 
-nav {
+.navHeading {
     display: flex;
-    column-gap: 1em;
-    justify-content: flex-end;
+    justify-content: space-between;
+    nav {
+        display: flex;
+        column-gap: 1em;
+        margin-block: auto;
+    }
 }
 
 .mainSection {
