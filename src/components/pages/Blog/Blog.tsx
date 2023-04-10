@@ -13,6 +13,13 @@ const blogs: IBlog[] = [
                 content: `
                 <a href='https://moment.github.io/luxon/#/' target='_blank'>luxon</a>
                 `
+            },
+            {
+                title: 'Useful Web Standard Tools',
+                date: blogDateFormatter('2023-04-10'),
+                content: `
+                <a href='https://wave.webaim.org/' target='_blank'>WAVE Report</a>
+                `
             }
         ]
     },
