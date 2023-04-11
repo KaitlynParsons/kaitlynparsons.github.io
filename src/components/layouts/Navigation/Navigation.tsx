@@ -4,7 +4,7 @@ import "./Navigation.scss";
 import { IContact } from "../../../interfaces/IContact";
 import github from "../../../assets/github.svg";
 import linkedin from "../../../assets/linkedin.svg";
-// import email from "../../../assets/email.svg";
+import email from "../../../assets/email.svg";
 
 const contact: IContact[] = [
   {
@@ -21,13 +21,13 @@ const contact: IContact[] = [
       },
       href: 'https://www.linkedin.com/in/kpars/'
   },
-  // {
-  //   image: {
-  //       link: email,
-  //       alt: 'email'
-  //   },
-  //   href: 'mailto:'
-  // }
+  {
+    image: {
+        link: email,
+        alt: 'email'
+    },
+    href: 'mailto:kaitlynparsons@outlook.com.au'
+  }
 ];
 
 const Navigation = () => {
