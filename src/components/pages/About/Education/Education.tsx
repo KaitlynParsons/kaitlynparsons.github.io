@@ -86,7 +86,7 @@ const Education = () => {
           <>
             {selectedCategory.timeline.map((category, index) => (
               <div key={index}>
-                <a href={category.verify.reference} target="_blank">
+                <a href={category.verify.reference} className="no-bg" target="_blank">
                   <img src={popup} alt='verification link' />
                 </a>
                 <h3>{category.educator}</h3>

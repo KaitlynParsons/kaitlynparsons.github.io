@@ -30,7 +30,7 @@ const experience: IExperience[] = [
         • Worked on a dashboard redesign, including the use of a third party currency conversion api, Opensearch queries to display various information to the user about the company and the ability to move and enable/disable the dashboard components using react grid layout stored in local storage to retain the users layout.`
       }
     ],
-    skills: "React.js · Amazon Web Services (AWS) · AWS Lambda · Amazon S3 · Amazon Dynamodb · Opensearch · Jest · TypeScript · Node.js"
+    skills: "Amazon Web Services (Lambda, S3, Dynamodb) · React.js · Opensearch · Jest · TypeScript · Node.js"
   },
   {
     company: "Canstar",
@@ -55,7 +55,7 @@ const experience: IExperience[] = [
         • Developed email alerting tools with GoogleScript and Google triggers.`
       }
     ],
-    skills: "Microservices · Amazon Web Services (AWS) · TypeScript · Node.js · Angular · GraphQL · Fishtown Analytics dbt · Google Cloud Functions · JavaScript · Google BigQuery · Python (Programming Language) · Google Cloud Platform (GCP)"
+    skills: "Google Cloud Platform (Functions, BigQuery) · Microservices · TypeScript · Node.js · Angular · GraphQL · Fishtown Analytics dbt · JavaScript · Python"
   },
   {
     company: "In The Code",
@@ -102,7 +102,7 @@ const Experience = () => {
         }
         content={
           <>
-            <a href={selectedCompany.url} target="_blank">
+            <a href={selectedCompany.url} className="company-link" target="_blank">
               {selectedCompany.url}
             </a>
             {selectedCompany.timeline.map((role, index) => (
