@@ -3,6 +3,8 @@ import Navigation from "./components/layouts/Navigation/Navigation";
 import ReactGA from "react-ga4";
 import { useEffect } from "react";
 import React from "react";
+import ComingSoon from "./components/pages/ComingSoon/ComingSoon";
+import Loading from "./components/pages/Loading/Loading";
 
 const About = React.lazy(() => import("./components/pages/About/About"));
 const Blog = React.lazy(() => import("./components/pages/Blog/Blog"));
@@ -15,7 +17,7 @@ const router = createHashRouter([
       {
         path: "",
         element: (
-          <React.Suspense fallback={<>Loading...</>}>
+          <React.Suspense fallback={<Loading />}>
             <About />
           </React.Suspense>
         ),
@@ -23,7 +25,7 @@ const router = createHashRouter([
       {
         path: "about",
         element: (
-            <React.Suspense fallback={<>Loading...</>}>
+            <React.Suspense fallback={<Loading />}>
               <About />
             </React.Suspense>
           ),
@@ -31,8 +33,16 @@ const router = createHashRouter([
       {
         path: "blog",
         element: (
-            <React.Suspense fallback={<>Loading...</>}>
+            <React.Suspense fallback={<Loading />}>
               <Blog />
+            </React.Suspense>
+          ),
+      },
+      {
+        path: "projects",
+        element: (
+            <React.Suspense fallback={<>Loading...</>}>
+              <ComingSoon />
             </React.Suspense>
           ),
       },

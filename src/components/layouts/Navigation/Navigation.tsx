@@ -57,8 +57,10 @@ const Navigation = () => {
   return (
     <div className="margin-lr">
       <header className="navHeading">
-        <h1></h1>
+        <h1 className="title-desktop">Kaitlyn Parsons</h1>
+        <h1 className="title-tablet">KP</h1>
         <nav>
+          <a onClick={() => navigate('projects')}>Projects</a>
           <a onClick={() => navigate('blog')}>Blog</a>
           <a onClick={() => navigate('about')}>About</a>
         </nav>

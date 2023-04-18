@@ -1,0 +1,7 @@
+import "./Loading.scss";
+
+const Loading = () => {
+    return <p className="loading">Loading</p>
+}
+
+export default Loading;
