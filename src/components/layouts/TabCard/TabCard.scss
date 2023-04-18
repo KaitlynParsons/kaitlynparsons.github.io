@@ -36,11 +36,13 @@
         }
     
         nav {
-            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
             text-align: center;
             
             a {
                 padding: 0.1em 0.5em;
+                display: inline-block;
  
                 &.active {
                     color: index.$mono-color-4;

@@ -5,17 +5,11 @@ import "./About.scss";
 
 const About = () => {
     return (
-      <div className="wrapper">
-        <div className="headline">
-          <Headline />
-        </div>
-        <div className="experience">
-          <Experience />
-        </div>
-        <div className="education">
-          <Education />
-        </div>
-      </div>
+      <>
+        <Headline />
+        <Experience />
+        <Education />
+      </>
     );
   };
   
