@@ -41,7 +41,7 @@ const router = createHashRouter([
       {
         path: "projects",
         element: (
-            <React.Suspense fallback={<>Loading...</>}>
+            <React.Suspense fallback={<Loading />}>
               <ComingSoon />
             </React.Suspense>
           ),
