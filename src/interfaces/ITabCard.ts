@@ -1,5 +1,5 @@
 export interface ITabCard {
-    title: string;
-    nav: JSX.Element;
+    title?: string;
+    nav?: JSX.Element;
     content: JSX.Element;
 }

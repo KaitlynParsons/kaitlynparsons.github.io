@@ -11,14 +11,13 @@
 
 @keyframes slidein {
     0% {
-        fill:#FDDEF3;
+        fill:#CBE432;
     }
     50% {
         fill: #AE0D7A;
-        filter: drop-shadow( 1px 2px 1px #AE0D7A);
     }
     100% {
-        fill:#FDDEF3;
+        fill:#CBE432;
     }
 }
 </style>

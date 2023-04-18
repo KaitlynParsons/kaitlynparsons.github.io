@@ -4,6 +4,8 @@ $mono-color-3: #AE0D7A;
 $mono-color-4: #F033B4;
 $mono-color-5: #FDDEF3;
 
+$complementary: #CBE432;
+
 :root {
   font-family: Tungsten-Bold,arial,georgia,sans-serif;
   line-height: 2em;
@@ -31,7 +33,7 @@ a {
   transition: top ease 0.5s;
 }
 a:hover {
-  color: $mono-color-4;
+  color: $complementary;
   top: -0.25em;
 }
 

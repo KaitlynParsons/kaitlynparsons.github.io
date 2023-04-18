@@ -1,27 +1,3 @@
-@use '../../../../index';
-
-.logo {
-    padding: 1.5em;
-    margin: auto;
-    width: 100px;
-    height: 100px;
-}
-
-
-.headline-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: auto;
-    text-align: left;
-    grid-template-areas: "p img";
-}
-
-.img-grid-area {
-    grid-area: img;
-}
-
-.p-grid-area {
-    grid-area: p;
-    display: flex;
-    align-items: center;
+.headline-title {
+    margin: 0;
 }
