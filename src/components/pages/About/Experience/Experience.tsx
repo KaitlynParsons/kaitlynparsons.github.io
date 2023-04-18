@@ -17,7 +17,7 @@ const experience: IExperience[] = [
         `
       }
     ],
-    skills: "Amazon Web Services (AWS) · Jest · TypeScript · Node.js · Angular"
+    skills: "Amazon Web Services · Jest · TypeScript · Node.js · Angular"
   },
   {
     company: "Paytron",
@@ -55,7 +55,7 @@ const experience: IExperience[] = [
         • Developed email alerting tools with GoogleScript and Google triggers.`
       }
     ],
-    skills: "Google Cloud Platform (Functions, BigQuery) · Microservices · TypeScript · Node.js · Angular · GraphQL · Fishtown Analytics dbt · JavaScript · Python"
+    skills: "Google Cloud Platform(Functions, BigQuery) · Microservices · TypeScript · Node.js · Angular · GraphQL · Fishtown Analytics dbt · JavaScript · Python"
   },
   {
     company: "In The Code",
@@ -69,7 +69,7 @@ const experience: IExperience[] = [
         • Various small enhancements on a Java and Swift based business learning mobile platform Bizveristy.`
       }
     ],
-    skills: "Swift (Programming Language) · Objective-C · MongoDB · Express.js · Amazon Web Services (AWS) · TypeScript · Node.js · Angular · Java"
+    skills: "Swift · Objective-C · MongoDB · Express.js · Amazon Web Services · TypeScript · Node.js · Angular · Java"
   }
 ];
 

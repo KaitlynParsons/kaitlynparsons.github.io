@@ -9,6 +9,10 @@
 
         a {
             padding: 0 0.5em;
+
+            &.active {
+                color: index.$complementary;
+            }
         }
 
         a:first-child {

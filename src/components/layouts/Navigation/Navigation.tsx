@@ -30,19 +30,29 @@ const contact: IContact[] = [
   }
 ];
 
-const Navigation = () => {
-  const contactsForDisplay = contact.map((detail, index) => {
-    return (
-      <a key={index} href={detail.href} target="_blank" rel="noreferrer">
-        <img src={detail.image.link} alt={detail.image.alt} />
-      </a>
-    );
-  });
+const navigationItems = [
+  {
+    title: 'Projects',
+    link: 'projects'
+  },
+  {
+    title: 'Blog',
+    link: 'blog'
+  },
+  {
+      title: 'About',
+      link: 'about'
+  }
+];
 
+const Navigation = () => {
   const [navigateState, setNavigateState] = useState(false);
+  const [selectedNav, setSelectedNav] = useState(navigationItems[2]);
   const navigating = useNavigate();
 
   const navigate = (path: string) => {
+    const newRoute = navigationItems.find(nav => nav.link === path);
+    newRoute && setSelectedNav(newRoute);
     navigating(path);
     setNavigateState(true);
   }
@@ -60,16 +70,27 @@ const Navigation = () => {
         <h1 className="title-desktop">Kaitlyn Parsons</h1>
         <h1 className="title-tablet">KP</h1>
         <nav>
-          <a onClick={() => navigate('projects')}>Projects</a>
-          <a onClick={() => navigate('blog')}>Blog</a>
-          <a onClick={() => navigate('about')}>About</a>
+          {navigationItems.map((item, index) => {
+            return <a 
+            className={selectedNav.link === item.link ? "active" : ""}
+            key={index}
+            onClick={() => navigate(item.link)}>
+              {item.title}
+            </a>;
+          })}
         </nav>
       </header>
       <section className="mainSection">
         <Outlet />
       </section>
       <footer>
-          {contactsForDisplay}
+        {contact.map((detail, index) => {
+          return (
+            <a key={index} href={detail.href} target="_blank" rel="noreferrer">
+              <img src={detail.image.link} alt={detail.image.alt} />
+            </a>
+          );
+        })}
       </footer>
     </div>
   );

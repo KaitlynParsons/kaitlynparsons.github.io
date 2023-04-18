@@ -5,19 +5,19 @@
 .cls-1{fill:none;}
 
 .cls-2{
-    fill: #AE0D7A;
+    fill: #CBE432;
     animation: slidein 1s infinite;
 }
 
 @keyframes slidein {
     0% {
-        fill:#CBE432;
+        fill:#FDDEF3;
     }
     50% {
-        fill: #AE0D7A;
+        fill:#CBE432;
     }
     100% {
-        fill:#CBE432;
+        fill:#FDDEF3;
     }
 }
 </style>

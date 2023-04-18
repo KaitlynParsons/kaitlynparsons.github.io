@@ -8,7 +8,7 @@
 <style>
 .cls-2{
     clip-path:url(#clip-path);
-    fill: #AE0D7A;
+    fill: #CBE432;
     animation: slidein 3s infinite;
 }
 
@@ -17,8 +17,7 @@
         fill:#FDDEF3;
     }
     50% {
-        fill: #AE0D7A;
-        filter: drop-shadow( 1px 2px 1px #AE0D7A);
+        fill:#CBE432;
     }
     100% {
         fill:#FDDEF3;
