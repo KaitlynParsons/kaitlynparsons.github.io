@@ -12,7 +12,7 @@ const Headline = () => {
             </h2>
             I'm a Software Engineer from Brisbane, Australia with a passion for technology and software development.
             I focus on writing secure, clean, efficient and reusable code.<br /><br />
-            Outside of software, you'll find me watching tennis, at the gym, reading or eating yumcha &#129375;
+            Outside of software you'll find me watching tennis, at the gym, reading or eating yumcha &#129375;
           </div>
         }
       />

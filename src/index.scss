@@ -1,10 +1,10 @@
 $mono-color-1: #340926;
 $mono-color-2: #510639;
-$mono-color-3: #AE0D7A;
-$mono-color-4: #F033B4;
-$mono-color-5: #FDDEF3;
+$mono-color-3: #ae0d7a;
+$mono-color-4: #f033b4;
+$mono-color-5: #fddef3;
 
-$complementary: #CBE432;
+$complementary: #cbe432;
 
 :root {
   font-family: Tungsten-Bold,arial,georgia,sans-serif;
@@ -20,6 +20,12 @@ $complementary: #CBE432;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+body,
+html {
+  display: grid;
+  margin-bottom: 2em;
 }
 
 a {
