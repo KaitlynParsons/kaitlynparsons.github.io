@@ -13,11 +13,10 @@ const experience: IExperience[] = [
         duration: "Aug 2022 - Present | Full-time",
         description: `• Working in LeSS (Large Scale Scrum) framework, understanding and developing internal financial systems in a collaborative way.
         • Developed the first UI/UX iteration of a data driven set of instructions to allow financial administrators to take ownership of changes to their workflows.
-        • Negotiate with Product Owner to iteratively deliver small chunks of larger features on a 2 week sprint basis.
         `
       }
     ],
-    skills: "Amazon Web Services · Jest · TypeScript · Node.js · Angular"
+    skills: "Amazon Web Services(S3, Lambda, API Gateway) · Jest · TypeScript · Node.js · Angular"
   },
   {
     company: "Paytron",
@@ -30,7 +29,7 @@ const experience: IExperience[] = [
         • Worked on a dashboard redesign, including the use of a third party currency conversion api, Opensearch queries to display various information to the user about the company and the ability to move and enable/disable the dashboard components using react grid layout stored in local storage to retain the users layout.`
       }
     ],
-    skills: "Amazon Web Services (Lambda, S3, Dynamodb) · React.js · Opensearch · Jest · TypeScript · Node.js"
+    skills: "Amazon Web Services (S3, Lambda, Dynamodb, API Gateway) · React.js · Opensearch · Jest · TypeScript · Node.js"
   },
   {
     company: "Canstar",
@@ -55,7 +54,7 @@ const experience: IExperience[] = [
         • Developed email alerting tools with GoogleScript and Google triggers.`
       }
     ],
-    skills: "Google Cloud Platform(Functions, BigQuery) · Microservices · TypeScript · Node.js · Angular · GraphQL · Fishtown Analytics dbt · JavaScript · Python"
+    skills: "Google Cloud Platform(Functions, BigQuery, Data Studio, Scheduler) · Microservices · TypeScript · Node.js · Angular · GraphQL · Fishtown Analytics dbt · Python"
   },
   {
     company: "In The Code",
