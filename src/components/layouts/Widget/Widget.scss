@@ -1,0 +1,28 @@
+@use '../../../index.scss';
+
+.widget {
+    display: flex;
+    flex-direction: row;
+
+    div {
+        flex-grow: 1;
+        flex-basis: 50%;
+    }
+
+    div:first-child {
+        border-right: 1px solid index.$complementary;
+        animation: breathing 1s infinite;
+    }
+}
+
+@keyframes breathing {
+    0% {
+        border-right: 1px solid index.$mono-color-4;
+    }
+    50% {
+        border-right: 1px solid index.$complementary;
+    }
+    100% {
+        border-right: 1px solid index.$mono-color-4;
+    }
+}

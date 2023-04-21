@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
-import "./Navigation.scss";
+import "./MainLayout.scss";
 import { IContact } from "../../../interfaces/IContact";
 import github from "../../../assets/github.svg";
 import linkedin from "../../../assets/linkedin.svg";
 import email from "../../../assets/email.svg";
+import Widget from "../Widget/Widget";
 
 const contact: IContact[] = [
   {
@@ -45,7 +46,7 @@ const navigationItems = [
   }
 ];
 
-const Navigation = () => {
+const MainLayout = () => {
   const [navigateState, setNavigateState] = useState(false);
   const [selectedNav, setSelectedNav] = useState(navigationItems[2]);
   const navigating = useNavigate();
@@ -66,6 +67,7 @@ const Navigation = () => {
 
   return (
     <div className="margin-lr">
+      <Widget />
       <header className="navHeading">
         <h1 className="title-desktop">Kaitlyn Parsons</h1>
         <h1 className="title-tablet">KP</h1>
@@ -96,4 +98,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default MainLayout;

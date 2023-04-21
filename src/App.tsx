@@ -1,5 +1,5 @@
 import { RouterProvider, createHashRouter } from "react-router-dom";
-import Navigation from "./components/layouts/Navigation/Navigation";
+import MainLayout from "./components/layouts/MainLayout/MainLayout";
 import ReactGA from "react-ga4";
 import { useEffect } from "react";
 import React from "react";
@@ -12,7 +12,7 @@ const Blog = React.lazy(() => import("./components/pages/Blog/Blog"));
 const router = createHashRouter([
   {
     path: "/",
-    element: <Navigation />,
+    element: <MainLayout />,
     children: [
       {
         path: "",
