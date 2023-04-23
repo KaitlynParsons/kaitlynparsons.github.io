@@ -8,6 +8,7 @@ const blogs: IBlog[] = [
         category: 'Technology',
         articles: [
             {
+                id: 1,
                 title: 'Useful Packages',
                 date: blogDateFormatter('2023-04-07'),
                 content: `
@@ -15,6 +16,7 @@ const blogs: IBlog[] = [
                 `
             },
             {
+                id: 2,
                 title: 'Useful Web Standard Tools',
                 date: blogDateFormatter('2023-04-10'),
                 content: `
@@ -53,7 +55,7 @@ const Blog = () => {
             allArticles.map((article, index) => {
                 return (
                     <div className="blog-article" key={index}>
-                        <h4>{article.title}</h4>
+                        <h3>{article.title}</h3>
                         <span>{article.date}</span>
                         <div dangerouslySetInnerHTML={{ __html: article.content }} />
                     </div>

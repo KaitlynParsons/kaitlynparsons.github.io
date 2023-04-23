@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import "./MainLayout.scss";
 import { IContact } from "../../../interfaces/IContact";
 import github from "../../../assets/github.svg";
@@ -47,9 +47,12 @@ const navigationItems = [
 ];
 
 const MainLayout = () => {
-  const [navigateState, setNavigateState] = useState(false);
-  const [selectedNav, setSelectedNav] = useState(navigationItems[2]);
   const navigating = useNavigate();
+  const location = useLocation();
+  const existingPath = navigationItems.find(item => item.link === location.pathname.slice(1));
+  
+  const [navigateState, setNavigateState] = useState(false);
+  const [selectedNav, setSelectedNav] = useState(existingPath || navigationItems[2]);
 
   const navigate = (path: string) => {
     const newRoute = navigationItems.find(nav => nav.link === path);
@@ -73,12 +76,15 @@ const MainLayout = () => {
         <h1 className="title-tablet">KP</h1>
         <nav>
           {navigationItems.map((item, index) => {
-            return <a 
-            className={selectedNav.link === item.link ? "active" : ""}
-            key={index}
-            onClick={() => navigate(item.link)}>
-              {item.title}
-            </a>;
+            return (
+              <a
+                className={selectedNav.link === item.link ? "active" : ""}
+                key={index}
+                onClick={() => navigate(item.link)}
+              >
+                {item.title}
+              </a>
+            );
           })}
         </nav>
       </header>

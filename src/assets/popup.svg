@@ -6,7 +6,7 @@
 
 .cls-2{
     fill: #CBE432;
-    animation: slidein 1s infinite;
+    animation: slidein 2s infinite;
 }
 
 @keyframes slidein {
