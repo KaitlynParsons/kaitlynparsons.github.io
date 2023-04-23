@@ -39,9 +39,12 @@
             white-space: nowrap;
             text-align: center;
             padding-top: 0.5em;
+            width: 80vw;
+            margin: auto;
             
             a {
-                padding: 0.25em 0.5em;
+                display: inline-block;
+                padding: 0 0.5em;
  
                 &.active {
                     color: index.$complementary;
