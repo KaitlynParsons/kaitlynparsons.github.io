@@ -26,7 +26,7 @@ const Navigation = () => {
 
   const [navigateState, setNavigateState] = useState(false);
   const [selectedNav, setSelectedNav] = useState(
-    existingPath || navigationItems[2]
+    existingPath || navigationItems[0]
   );
 
   const navigate = (path: string) => {
