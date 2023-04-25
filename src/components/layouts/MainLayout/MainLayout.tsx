@@ -4,7 +4,11 @@ import { IContact } from "../../../interfaces/IContact";
 import github from "../../../assets/github.svg";
 import linkedin from "../../../assets/linkedin.svg";
 import email from "../../../assets/email.svg";
+import menu from "../../../assets/burger-menu.svg";
+import cross from "../../../assets/cross.svg";
 import { yearsSinceFormatter } from "../../../helpers/DateHelper";
+import Navigation from "../Navigation/Navigation";
+import { useState } from "react";
 
 const contact: IContact[] = [
   {
@@ -32,6 +36,7 @@ const contact: IContact[] = [
 
 const MainLayout = () => {
   const timeCoding = `${yearsSinceFormatter('2018-04-24')} YEARS`;
+  const [showNavigation, setShowNavigation] = useState(false);
 
   return (
     <div className="margin-lr">
@@ -40,8 +45,12 @@ const MainLayout = () => {
           <h1 className="title-desktop">Kaitlyn Parsons</h1>
           <h1 className="title-tablet">KP</h1>
         </div>
-        <div>👩‍💻 {timeCoding}</div>
+        <div>
+          👩‍💻 {timeCoding}
+          <img onClick={() => setShowNavigation(!showNavigation)} className="burger-menu" src={!showNavigation ? menu : cross} alt='menu' />
+        </div>
       </header>
+      {showNavigation && <Navigation />}
       <section className="mainSection">
         <Outlet />
       </section>

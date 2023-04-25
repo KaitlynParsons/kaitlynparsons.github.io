@@ -5,28 +5,16 @@
     align-items: center;
     justify-content: space-between;
 
-    nav {
+    div {
         display: flex;
-        margin-block: auto;
-
-        a {
-            padding: 0 0.5em;
-
-            &.active {
-                color: index.$complementary;
-            }
-        }
-
-        a:first-child {
-            border-radius: 1em 0 0 1em;
-            padding-left: 1em;
-        }
-
-        a:last-child {
-            border-radius: 0 1em 1em 0;
-            padding-right: 1em;
-        }
+        align-items: center;
     }
+
+    .burger-menu {
+        margin: 0 0 0 0.5em;
+        cursor: pointer;
+    }
+
     h1 {
         margin: 0;
     }
