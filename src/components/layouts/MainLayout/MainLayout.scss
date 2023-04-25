@@ -2,7 +2,9 @@
 
 .navHeading {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+
     nav {
         display: flex;
         margin-block: auto;
@@ -49,7 +51,7 @@
 }
 
 .mainSection {
-    padding: 1em 0 1em 0;
+    padding: 0 0 1em 0;
 }
 
 .margin-lr {

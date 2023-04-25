@@ -3,7 +3,12 @@
 .cardSection {
     text-align: left;
 
-    h2, h3 {
+    header {
+        border-bottom: 1px solid index.$complementary;
+        animation: breathing 1s infinite;
+    }
+
+    h3 {
         margin-bottom: 0;
     }
 
@@ -39,7 +44,7 @@
             white-space: nowrap;
             text-align: center;
             padding-top: 0.5em;
-            width: 80vw;
+            width: 83vw;
             margin: auto;
             
             a {
@@ -63,3 +68,15 @@
         }
     }
 }
+
+@keyframes breathing {
+    0% {
+        border-bottom: 1px solid index.$mono-color-4;
+    }
+    50% {
+        border-bottom: 1px solid index.$complementary;
+    }
+    100% {
+        border-bottom: 1px solid index.$mono-color-4;
+    }
+  }
