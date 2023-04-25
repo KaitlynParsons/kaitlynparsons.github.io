@@ -10,5 +10,5 @@ export const currentTimeFormatter = (): string | null => {
 
 export const yearsSinceFormatter = (date: string): string => {
     const yearDiff = DateTime.fromISO(date, {zone: 'Australia/Brisbane', setZone: true}).diffNow('years').years;
-    return Math.abs(yearDiff).toFixed(2);
+    return Math.abs(yearDiff).toFixed(1);
 }

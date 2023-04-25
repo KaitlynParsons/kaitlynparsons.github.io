@@ -35,19 +35,18 @@ const contact: IContact[] = [
 ];
 
 const MainLayout = () => {
-  const timeCoding = `${yearsSinceFormatter('2018-04-24')} YEARS`;
+  const timeCoding = `${yearsSinceFormatter('2018-04-24')}`;
   const [showNavigation, setShowNavigation] = useState(false);
 
   return (
     <div className="margin-lr">
       <header className="navHeading">
         <div>
-          <h1 className="title-desktop">Kaitlyn Parsons</h1>
-          <h1 className="title-tablet">KP</h1>
+          <img onClick={() => setShowNavigation(!showNavigation)} className="burger-menu" src={!showNavigation ? menu : cross} alt='menu' />
+          <h1 className="title">kaitlyn<span>parsons</span></h1>
         </div>
         <div>
           👩‍💻 {timeCoding}
-          <img onClick={() => setShowNavigation(!showNavigation)} className="burger-menu" src={!showNavigation ? menu : cross} alt='menu' />
         </div>
       </header>
       {showNavigation && <Navigation />}

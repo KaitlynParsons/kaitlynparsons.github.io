@@ -5,14 +5,9 @@
     position: absolute;
     display: flex; 
     flex-direction: column;
-    text-align: right;
-    right: 5em;
+    text-align: left;
     width: 25vw;
     background-color: index.$mono-color-1;
-
-    @media only screen and (max-width: 768px) {
-        right: 1em;
-    }
     
     a {
         background-color: index.$mono-color-1;
