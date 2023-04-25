@@ -42,11 +42,11 @@ const MainLayout = () => {
     <div className="margin-lr">
       <header className="navHeading">
         <div>
-          <img onClick={() => setShowNavigation(!showNavigation)} className="burger-menu" src={!showNavigation ? menu : cross} alt='menu' />
           <h1 className="title">kaitlyn<span>parsons</span></h1>
         </div>
         <div>
           👩‍💻 {timeCoding}
+          <img onClick={() => setShowNavigation(!showNavigation)} className="burger-menu" src={!showNavigation ? menu : cross} alt='menu' />
         </div>
       </header>
       {showNavigation && <Navigation />}
