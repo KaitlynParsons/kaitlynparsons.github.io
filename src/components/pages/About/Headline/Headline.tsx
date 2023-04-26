@@ -1,5 +1,4 @@
 import TabCard from "../../../layouts/TabCard/TabCard";
-import icon from "../../../../assets/code-merge.svg";
 import "./Headline.scss";
 
 const Headline = () => {
@@ -8,12 +7,9 @@ const Headline = () => {
       title="About"
         content={
           <div>
-            <h2 className="headline-title">
-              <img src={icon} alt="icon" />
-            </h2>
-            I'm a Software Engineer from Brisbane, Australia with a passion for technology and software development.<br />
-            I focus on writing secure, clean, efficient and reusable code.<br /><br />
-            Outside of software you'll find me watching tennis, at the gym, reading or eating yumcha &#129375;
+            I'm a <strong className="role">Software Engineer</strong> from Brisbane, Australia with a passion for technology and software development.<br />
+            I focus on writing secure, clean, efficient and reusable code.<br />
+            I continuously aim to challenge myself and improve my skill set with industry experience and personal projects.
           </div>
         }
       />

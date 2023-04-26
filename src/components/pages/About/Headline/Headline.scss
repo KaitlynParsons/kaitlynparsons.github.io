@@ -1,3 +1,5 @@
-.headline-title {
-    margin: 0;
+@use "../../../../index.scss";
+
+.role {
+    color: index.$complementary;
 }
