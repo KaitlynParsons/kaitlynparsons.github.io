@@ -5,18 +5,13 @@
     position: absolute;
     display: flex; 
     flex-direction: column;
-    text-align: right;
-    right: 5em;
-    width: 25vw;
+    text-align: left;
+    width: 100%;
     background-color: index.$mono-color-1;
-
-    @media only screen and (max-width: 768px) {
-        right: 1em;
-    }
+    border-bottom: 1px solid index.$mono-color-4;
     
     a {
         background-color: index.$mono-color-1;
-        padding-right: 0.5em;
     }
 
     a:hover {
