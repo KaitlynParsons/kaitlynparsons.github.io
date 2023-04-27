@@ -63,7 +63,7 @@ const MainLayout = () => {
           <img onClick={() => toggleNavigation()} className="burger-menu" src={!showNavigation ? menu : cross} alt='menu' />
         </div>
       </header>
-      {showNavigation && <Navigation />}
+      {showNavigation && <Navigation nav={toggleNavigation} />}
       {showNavigation && <section className="sectionOverlay" />}
       <section className="mainSection">
         <Outlet />

@@ -17,7 +17,7 @@ const navigationItems = [
   },
 ];
 
-const Navigation = () => {
+const Navigation = (props: {nav: () => void}) => {
   const navigating = useNavigate();
   const location = useLocation();
   const existingPath = navigationItems.find(
@@ -39,6 +39,7 @@ const Navigation = () => {
   useEffect(() => {
     if (navigateState) {
       setNavigateState(false);
+      props.nav();
     }
   }, [navigateState]);
 
