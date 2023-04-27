@@ -11,7 +11,7 @@ const experience: IExperience[] = [
       {
         title: "Full Stack Engineer",
         duration: "Aug 2022 - Present | Full-time",
-        description: `• Working in LeSS (Large Scale Scrum) framework, understanding and developing internal financial systems in a collaborative way.
+        description: `• Working in LeSS (Large Scale Scrum) framework to understand and develop internal financial systems.
         • Developed the first UI/UX iteration of a data driven set of instructions to allow financial administrators to take ownership of changes to their workflows.
         `
       }
