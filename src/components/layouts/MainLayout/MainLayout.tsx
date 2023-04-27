@@ -42,6 +42,12 @@ const MainLayout = () => {
   const titleClicked = () => {
     navigating('');
     closeNavigation();
+    document.body.style.overflow = 'auto';
+  }
+
+  const toggleNavigation = () => {
+    setShowNavigation(!showNavigation);
+    document.body.style.overflow = !showNavigation ? 'hidden' : 'auto';
   }
 
   const closeNavigation = () => showNavigation && setShowNavigation(false);
@@ -54,10 +60,11 @@ const MainLayout = () => {
         </div>
         <div>
           👩‍💻 {timeCoding}
-          <img onClick={() => setShowNavigation(!showNavigation)} className="burger-menu" src={!showNavigation ? menu : cross} alt='menu' />
+          <img onClick={() => toggleNavigation()} className="burger-menu" src={!showNavigation ? menu : cross} alt='menu' />
         </div>
       </header>
       {showNavigation && <Navigation />}
+      {showNavigation && <section className="sectionOverlay" />}
       <section className="mainSection">
         <Outlet />
       </section>

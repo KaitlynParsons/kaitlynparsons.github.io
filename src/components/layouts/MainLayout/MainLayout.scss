@@ -33,6 +33,16 @@
 
 .mainSection {
     padding: 0 0 1em 0;
+    z-index: 1;
+}
+
+.sectionOverlay {
+    z-index: 2;
+    position: absolute;
+    background: rgba(0,0,0,.5);
+    backdrop-filter: blur(5px);
+    height: 100vh;
+    width: 100%;
 }
 
 .margin-lr {
