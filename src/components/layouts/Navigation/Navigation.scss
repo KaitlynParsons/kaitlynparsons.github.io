@@ -5,20 +5,25 @@
     position: absolute;
     display: flex; 
     flex-direction: column;
-    text-align: left;
+    text-align: right;
     width: 100%;
     background-color: index.$mono-color-1;
-    border-bottom: 1px solid index.$mono-color-4;
+    border-bottom: 2px solid index.$complementary;
     
     a {
+        padding: 0 1em;
         background-color: index.$mono-color-1;
+        font-weight: lighter;
+        text-transform: uppercase;
     }
 
     a:hover {
         top: 0;
+        font-weight: bolder;
     }
 
     .active {
         color: index.$complementary;
+        font-weight: bolder;
     }
 }
