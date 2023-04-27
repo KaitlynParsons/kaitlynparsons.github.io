@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import "./MainLayout.scss";
 import { IContact } from "../../../interfaces/IContact";
 import github from "../../../assets/github.svg";
@@ -37,12 +37,20 @@ const contact: IContact[] = [
 const MainLayout = () => {
   const timeCoding = `${yearsSinceFormatter('2018-04-24')}`;
   const [showNavigation, setShowNavigation] = useState(false);
+  const navigating = useNavigate();
+
+  const titleClicked = () => {
+    navigating('');
+    closeNavigation();
+  }
+
+  const closeNavigation = () => showNavigation && setShowNavigation(false);
 
   return (
     <div className="margin-lr">
       <header className="navHeading">
         <div>
-          <h1 className="title">kaitlyn<span>parsons</span></h1>
+          <h1 onClick={() => titleClicked()} className="title">kaitlyn<span>parsons</span></h1>
         </div>
         <div>
           👩‍💻 {timeCoding}
