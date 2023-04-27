@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./Education.scss";
-import popup from "../../../../assets/popup.svg";
-import diploma from "../../../../assets/diploma.jpg";
-import QCE from "../../../../assets/QCE.jpg";
+import popup from "../../../../assets/actions/popup.svg";
+import diploma from "../../../../assets/qualification/diploma.jpg";
+import QCE from "../../../../assets/qualification/QCE.jpg";
 import TabCard from "../../../layouts/TabCard/TabCard";
 const education = [
   {

@@ -8,22 +8,8 @@
 <style>
 .cls-2{
     clip-path:url(#clip-path);
-    fill: #CBE432;
-    animation: slidein 3s infinite;
+    fill: #f033b4;
 }
-
-@keyframes slidein {
-    0% {
-        fill:#FDDEF3;
-    }
-    50% {
-        fill:#CBE432;
-    }
-    100% {
-        fill:#FDDEF3;
-    }
-}
-
 </style>
 
 <clipPath id="clip-path">

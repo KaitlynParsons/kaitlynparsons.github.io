@@ -1,11 +1,11 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import "./MainLayout.scss";
 import { IContact } from "../../../interfaces/IContact";
-import github from "../../../assets/github.svg";
-import linkedin from "../../../assets/linkedin.svg";
-import email from "../../../assets/email.svg";
-import menu from "../../../assets/burger-menu.svg";
-import cross from "../../../assets/cross.svg";
+import github from "../../../assets/contact/github.svg";
+import linkedin from "../../../assets/contact/linkedin.svg";
+import email from "../../../assets/contact/email.svg";
+import menu from "../../../assets/actions/burger-menu.svg";
+import cross from "../../../assets/actions/cross.svg";
 import { yearsSinceFormatter } from "../../../helpers/DateHelper";
 import Navigation from "../Navigation/Navigation";
 import { useState } from "react";
