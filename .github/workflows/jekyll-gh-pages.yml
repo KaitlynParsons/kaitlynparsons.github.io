@@ -27,11 +27,13 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./portfolio
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Set up Node
-        working-directory: ./portfolio
         uses: actions/setup-node@v3
         with:
           node-version: 18
