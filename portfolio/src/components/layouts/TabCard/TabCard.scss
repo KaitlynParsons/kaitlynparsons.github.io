@@ -2,6 +2,16 @@
 
 .cardSection {
     text-align: left;
+    background-color: index.$mono-color-2;
+    border-radius: 1em;
+    padding: 1em;
+    margin-top: 1em;
+
+    header {
+        border-bottom: 1px solid index.$mono-color-4;
+        padding-bottom: 0.5em;
+        margin-bottom: 0.5em;
+    }
 
     h3 {
         margin-bottom: 0;
@@ -13,15 +23,12 @@
 
     h2 {
         text-align: center;
+        margin: 0;
     }
 
     .container { 
         .content {
-            background-color: index.$mono-color-2;
-            padding: 1em;
-            margin-top: 0.5em;
             text-align: right;
-            border-radius: 1em;
     
             div {
                 text-align: left;
