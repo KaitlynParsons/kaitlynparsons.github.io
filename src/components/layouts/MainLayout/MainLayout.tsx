@@ -6,9 +6,10 @@ import linkedin from "../../../assets/contact/linkedin.svg";
 import email from "../../../assets/contact/email.svg";
 import menu from "../../../assets/actions/burger-menu.svg";
 import cross from "../../../assets/actions/cross.svg";
-import { yearsSinceFormatter } from "../../../helpers/DateHelper";
+import logo from "../../../assets/code-merge.svg";
 import Navigation from "../Navigation/Navigation";
 import { useState } from "react";
+import Coding from "../../widgets/Coding/Coding";
 
 const contact: IContact[] = [
   {
@@ -35,8 +36,8 @@ const contact: IContact[] = [
 ];
 
 const MainLayout = () => {
-  const timeCoding = `${yearsSinceFormatter('2018-04-24')}`;
   const [showNavigation, setShowNavigation] = useState(false);
+  const [showCoding, setShowCoding] = useState(false);
   const navigating = useNavigate();
 
   const titleClicked = () => {
@@ -45,8 +46,14 @@ const MainLayout = () => {
     document.body.style.overflow = 'auto';
   }
 
+  const toggleCoding = () => {
+    setShowCoding(!showCoding);
+    closeNavigation();
+  }
+
   const toggleNavigation = () => {
     setShowNavigation(!showNavigation);
+    setShowCoding(false);
     document.body.style.overflow = !showNavigation ? 'hidden' : 'auto';
   }
 
@@ -59,10 +66,11 @@ const MainLayout = () => {
           <h1 onClick={() => titleClicked()} className="title">kaitlyn<span>parsons</span></h1>
         </div>
         <div>
-          👩‍💻 {timeCoding}
-          <img onClick={() => toggleNavigation()} className="burger-menu" src={!showNavigation ? menu : cross} alt='menu' />
+        <img onClick={() => toggleCoding()} className="logo" src={logo} alt='fork' />
+        <img onClick={() => toggleNavigation()} className="burger-menu" src={!showNavigation ? menu : cross} alt='menu' />
         </div>
       </header>
+      {showCoding && <Coding />}
       {showNavigation && <Navigation nav={toggleNavigation} />}
       {showNavigation && <section className="sectionOverlay" />}
       <section className="mainSection">

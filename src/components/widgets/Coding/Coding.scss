@@ -1,0 +1,14 @@
+@use "../../../index.scss";
+
+summary {
+    margin: 0.5em 0 0 0;
+    padding: 0 0.5em;
+    z-index: 4;
+    position: absolute;
+    display: flex;
+    background-color: index.$mono-color-1;
+    border: 2px solid;
+    right: 0;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, index.$mono-color-4, index.$mono-color-5);
+}
