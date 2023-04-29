@@ -43,7 +43,6 @@ const MainLayout = () => {
   const titleClicked = () => {
     navigating('');
     closeNavigation();
-    document.body.style.overflow = 'auto';
   }
 
   const toggleCoding = () => {
@@ -57,7 +56,12 @@ const MainLayout = () => {
     document.body.style.overflow = !showNavigation ? 'hidden' : 'auto';
   }
 
-  const closeNavigation = () => showNavigation && setShowNavigation(false);
+  const closeNavigation = () => {
+    if (showNavigation) {
+      setShowNavigation(false);
+      document.body.style.overflow = 'auto';
+    }
+  }
 
   return (
     <div className="margin-lr">
