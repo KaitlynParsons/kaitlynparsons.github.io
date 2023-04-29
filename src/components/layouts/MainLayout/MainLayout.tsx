@@ -72,7 +72,7 @@ const MainLayout = () => {
       </header>
       {showCoding && <Coding />}
       {showNavigation && <Navigation nav={toggleNavigation} />}
-      {showNavigation && <section className="sectionOverlay" />}
+      {showNavigation && <section onClick={() => toggleNavigation()} className="sectionOverlay" />}
       <section className="mainSection">
         <Outlet />
       </section>
