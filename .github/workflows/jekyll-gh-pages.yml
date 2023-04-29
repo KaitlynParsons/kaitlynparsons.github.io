@@ -38,6 +38,7 @@ jobs:
         with:
           node-version: 18
           cache: 'npm'
+          cache-dependency-path: ./portfolio/package-lock.json
       - name: Install dependencies and build
         run: |
           npm install
