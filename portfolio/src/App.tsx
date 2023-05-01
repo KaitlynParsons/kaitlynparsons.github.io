@@ -1,13 +1,12 @@
+import React, { useEffect } from "react";
 import { RouterProvider, createHashRouter } from "react-router-dom";
 import MainLayout from "./components/layouts/MainLayout/MainLayout";
 import ReactGA from "react-ga4";
-import { useEffect } from "react";
-import React from "react";
-import ComingSoon from "./components/pages/ComingSoon/ComingSoon";
 import Loading from "./components/pages/Loading/Loading";
 
 const About = React.lazy(() => import("./components/pages/About/About"));
 const Blog = React.lazy(() => import("./components/pages/Blog/Blog"));
+const ComingSoon = React.lazy(() => import("./components/pages/ComingSoon/ComingSoon"));
 
 const router = createHashRouter([
   {
