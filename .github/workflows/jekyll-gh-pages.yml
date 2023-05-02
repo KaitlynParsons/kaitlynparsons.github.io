@@ -41,10 +41,9 @@ jobs:
           cache-dependency-path: ./portfolio/package-lock.json
       - name: Install dependencies and build
         run: |
-          echo test = ${{vars.VITE_AUTH0_DOMAIN}}
           npm install
           npm run build
-        env:
+        with:
           VITE_AUTH0_DOMAIN: ${{vars.VITE_AUTH0_DOMAIN}}
           VITE_AUTH0_CLIENTID: ${{vars.VITE_AUTH0_CLIENTID}}
       - name: Setup Pages
