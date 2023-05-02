@@ -29,6 +29,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       VITE_INTERNAL: true
+      VITE_AUTH0_DOMAIN: {{ vars.VITE_AUTH0_DOMAIN }}
+      VITE_AUTH0_CLIENTID: {{ vars.VITE_AUTH0_CLIENTID }}
     defaults:
       run:
         working-directory: ./portfolio
