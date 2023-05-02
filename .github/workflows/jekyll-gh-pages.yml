@@ -41,11 +41,11 @@ jobs:
           cache-dependency-path: ./portfolio/package-lock.json
       - name: Install dependencies and build
         run: |
+          echo VITE_AUTH0_DOMAIN=${{vars.VITE_AUTH0_DOMAIN}} >> .env
+          echo VITE_AUTH0_CLIENTID=${{vars.VITE_AUTH0_CLIENTID}} >> .env
+          cat .env
           npm install
           npm run build
-        with:
-          VITE_AUTH0_DOMAIN: ${{vars.VITE_AUTH0_DOMAIN}}
-          VITE_AUTH0_CLIENTID: ${{vars.VITE_AUTH0_CLIENTID}}
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
