@@ -26,11 +26,11 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     env:
       VITE_INTERNAL: true
-      VITE_AUTH0_DOMAIN: {{ vars.VITE_AUTH0_DOMAIN }}
-      VITE_AUTH0_CLIENTID: {{ vars.VITE_AUTH0_CLIENTID }}
+      AUTH0_DOMAIN: {{ vars.VITE_AUTH0_DOMAIN }}
+      AUTH0_CLIENTID: {{ vars.VITE_AUTH0_CLIENTID }}
+    runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./portfolio
@@ -45,6 +45,7 @@ jobs:
           cache-dependency-path: ./portfolio/package-lock.json
       - name: Install dependencies and build
         run: |
+          echo "test: $AUTH0_DOMAIN"
           npm install
           npm run build
       - name: Setup Pages
