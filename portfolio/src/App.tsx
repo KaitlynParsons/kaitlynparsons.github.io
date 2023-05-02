@@ -45,6 +45,14 @@ const router = createHashRouter([
             </React.Suspense>
           ),
       },
+      {
+        path: "login",
+        element: (
+            <React.Suspense fallback={<Loading />}>
+              <></>
+            </React.Suspense>
+          ),
+      },
     ],
   },
 ]);

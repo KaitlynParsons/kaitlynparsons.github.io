@@ -1,4 +1,4 @@
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import "./MainLayout.scss";
 import { IContact } from "../../../interfaces/IContact";
 import github from "../../../assets/contact/github.svg";
@@ -8,8 +8,9 @@ import menu from "../../../assets/actions/burger-menu.svg";
 import cross from "../../../assets/actions/cross.svg";
 import logo from "../../../assets/code-merge.svg";
 import Navigation from "../Navigation/Navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Coding from "../../widgets/Coding/Coding";
+import Login from "../../pages/Login/Login";
 
 const contact: IContact[] = [
   {
@@ -36,13 +37,16 @@ const contact: IContact[] = [
 ];
 
 const MainLayout = () => {
+  const location = useLocation();
   const [showNavigation, setShowNavigation] = useState(false);
   const [showCoding, setShowCoding] = useState(false);
+  const [showUser, setShowUser] = useState(location.pathname.slice(1) === 'login');
   const navigating = useNavigate();
 
   const titleClicked = () => {
     navigating('');
     closeNavigation();
+    setShowUser(false);
   }
 
   const toggleCoding = () => {
@@ -63,6 +67,10 @@ const MainLayout = () => {
     }
   }
 
+  useEffect(() => {
+    setShowUser(location.pathname.slice(1) === 'login');
+  })
+
   return (
     <div className="margin-lr">
       <header className="navHeading">
@@ -71,6 +79,7 @@ const MainLayout = () => {
         </div>
         <div>
         <img onClick={() => toggleCoding()} className="logo" src={logo} alt='fork' />
+        {showUser && <Login />}
         <img onClick={() => toggleNavigation()} className="burger-menu" src={!showNavigation ? menu : cross} alt='menu' />
         </div>
       </header>
