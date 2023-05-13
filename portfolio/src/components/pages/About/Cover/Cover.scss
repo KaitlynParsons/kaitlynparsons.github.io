@@ -1,16 +1,10 @@
 @use '../../../../index.scss';
 .cover {
-    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 1em;
-
-    hr.dotted {
-        border: 1px solid index.$complementary;
-        width: 70%;
-    }
 }
 
 .profile {

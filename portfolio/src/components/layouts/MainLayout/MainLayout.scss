@@ -4,7 +4,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 2px solid index.$mono-color-4;
 
     div {
         display: flex;
@@ -56,26 +55,25 @@
     position: relative;
 
     @media only screen and (min-width: 768px) {
-        margin: 0 5em 0 5em;
+        margin: auto;
+        width: 50vw;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+
+    img {
+        margin: 0.5em 1em 0 1em;
     }
 
-    footer {
-        border-top: 2px solid index.$mono-color-4;
-        display: flex;
-        justify-content: center;
-        background-color: index.$mono-color-1;
+    a {
+        border: none;
+        background-color: transparent;
+    }
 
-        img {
-            margin: 0.5em 1em 0 1em;
-        }
-
-        a {
-            border: none;
-            background-color: transparent;
-        }
-
-        a:hover {
-            top: 0;
-        }
+    a:hover {
+        top: 0;
     }
 }
