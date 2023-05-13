@@ -10,14 +10,14 @@ const Pagination = (props: IPagination) => {
         disabled={currentPage <= 1}
         onClick={() => onPageChange(currentPage - 1)}
       >
-        {'< PREV'}
+        &#8668;
       </button>
-      <span>{currentPage} of {totalPages}</span>
+      <span>{currentPage}/{totalPages}</span>
       <button
         disabled={currentPage >= totalPages}
         onClick={() => onPageChange(currentPage + 1)}
       >
-        {'NEXT >'}
+        &#8669;
       </button>
     </div>
   );

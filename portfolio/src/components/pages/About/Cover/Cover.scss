@@ -1,0 +1,35 @@
+@use '../../../../index.scss';
+.cover {
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+
+    hr.dotted {
+        border: 1px solid index.$complementary;
+        width: 70%;
+    }
+}
+
+.arrow {
+    font-size: 20em;
+    padding-top: 0.1em;
+}
+
+.arrow::after {
+    content: '\21DD';
+    background: linear-gradient(to right, index.$mono-color-2 0%, index.$mono-color-4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.profile {
+    border-radius: 12em;
+    height: 12em;
+    width: 12em;
+    box-shadow: 2px 2px 5px index.$mono-color-2,
+    10px 10px 15px index.$mono-color-2,
+    -1px -1px 30px index.$mono-color-2;
+}

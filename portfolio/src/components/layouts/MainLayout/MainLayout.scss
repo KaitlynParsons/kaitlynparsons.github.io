@@ -39,8 +39,7 @@
 }
 
 .mainSection {
-    padding: 0 0 1em 0;
-    z-index: 1;
+    padding: 1em 0 1em 0;
 }
 
 .sectionOverlay {
@@ -53,19 +52,17 @@
 }
 
 .margin-lr {
-    margin: 0 5em 0 5em;
+    margin: 0 0.5em 0 0.5em;
     position: relative;
 
-    @media only screen and (max-width: 768px) {
-        margin: 0 0.5em 0 0.5em;
+    @media only screen and (min-width: 768px) {
+        margin: 0 5em 0 5em;
     }
 
     footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        text-align: center;
+        border-top: 2px solid index.$mono-color-4;
+        display: flex;
+        justify-content: center;
         background-color: index.$mono-color-1;
 
         img {

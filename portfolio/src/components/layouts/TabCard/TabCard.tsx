@@ -1,5 +1,6 @@
 import { ITabCard } from "../../../interfaces/ITabCard";
 import "./TabCard.scss";
+import noise from "../../../assets/noise.svg";
 
 const TabCard = (props: ITabCard) => {
     return (
