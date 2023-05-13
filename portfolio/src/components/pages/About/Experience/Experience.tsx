@@ -5,12 +5,25 @@ import TabCard from "../../../layouts/TabCard/TabCard";
 
 const experience: IExperience[] = [
   {
+    company: "Easy Agile",
+    url: "https://www.easyagile.com",
+    timeline: [
+      {
+        title: "Software Engineer III",
+        duration: "May 2023 - Present | Full-time",
+        description: `
+        `
+      }
+    ],
+    skills: "Amazon Web Services · Jest · TypeScript · Node.js · React"
+  },
+  {
     company: "Findex",
     url: "https://www.findex.com.au",
     timeline: [
       {
         title: "Full Stack Engineer",
-        duration: "Aug 2022 - Present | Full-time",
+        duration: "Aug 2022 - May 2023 | Full-time",
         description: `• Working in LeSS (Large Scale Scrum) framework to understand and develop internal financial systems.
         • Developed the first UI/UX iteration of a data driven set of instructions to allow financial administrators to take ownership of changes to their workflows.
         `

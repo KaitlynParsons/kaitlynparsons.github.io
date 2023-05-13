@@ -8,12 +8,8 @@ const navigationItems = [
     link: "about",
   },
   {
-    title: "Projects",
-    link: "projects",
-  },
-  {
-    title: "Blog",
-    link: "blog",
+    title: "Garden",
+    link: "garden",
   },
 ];
 

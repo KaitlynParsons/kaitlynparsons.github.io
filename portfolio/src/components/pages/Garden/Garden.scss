@@ -3,13 +3,16 @@
 .blog-article {
     background-color: index.$mono-color-2;
     padding: 1em;
-    margin-top: 1em;
     text-align: left;
     border-radius: 1em;
 
     h3 {
         margin: 0;
     }
+}
+
+.blog-article:not(:last-child) {
+    margin-bottom: 1em;
 }
 
 .blog-article:hover {

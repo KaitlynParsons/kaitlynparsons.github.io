@@ -2,6 +2,15 @@
 
 .btn-container {
     display: block;
+    background-image: url('../../../assets/noise.svg');
+    box-shadow: 2px 2px 5px index.$mono-color-2,
+    10px 10px 15px index.$mono-color-2,
+    -1px -1px 30px index.$mono-color-2;
+    margin: auto;
+    
+    @media only screen and (min-width: 768px) {
+        width: 50vw;
+    }
 }
 
 .btn-container > button {

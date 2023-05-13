@@ -5,8 +5,7 @@ import ReactGA from "react-ga4";
 import Loading from "./components/pages/Loading/Loading";
 
 const About = React.lazy(() => import("./components/pages/About/About"));
-const Blog = React.lazy(() => import("./components/pages/Blog/Blog"));
-const ComingSoon = React.lazy(() => import("./components/pages/ComingSoon/ComingSoon"));
+const Garden = React.lazy(() => import("./components/pages/Garden/Garden").then(module => ({ default: module.Garden })));
 
 const router = createHashRouter([
   {
@@ -30,18 +29,10 @@ const router = createHashRouter([
           ),
       },
       {
-        path: "blog",
+        path: "garden",
         element: (
             <React.Suspense fallback={<Loading />}>
-              <Blog />
-            </React.Suspense>
-          ),
-      },
-      {
-        path: "projects",
-        element: (
-            <React.Suspense fallback={<Loading />}>
-              <ComingSoon />
+              <Garden />
             </React.Suspense>
           ),
       },

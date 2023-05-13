@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { blogDateFormatter } from "../../../helpers/DateHelper";
 import { IArticle, IBlog } from "../../../interfaces/IBlog";
-import "./Blog.scss";
+import "./Garden.scss";
 
-const blogs: IBlog[] = [
+const gardens: IBlog[] = [
     {
         category: 'Technology',
         articles: [
@@ -37,12 +37,12 @@ const blogs: IBlog[] = [
     },
 ]
 
-const Blog = () => {
+export const Garden = () => {
     const [allArticles, setAllArticles] = useState<IArticle[]>([]);
 
     const getAllArticles = async () => {
         const articles: IArticle[] = [];
-        blogs.map(blog => articles.push(...blog.articles));
+        gardens.map(blog => articles.push(...blog.articles));
         setAllArticles(articles);
     }
 
@@ -64,5 +64,3 @@ const Blog = () => {
         }
     </>
 };
-
-export default Blog;
