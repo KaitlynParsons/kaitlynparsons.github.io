@@ -12,7 +12,7 @@ const Pagination = (props: IPagination) => {
       >
         {'< PREV'}
       </button>
-      <span>{currentPage} of {totalPages}</span>
+      <span>{currentPage}/{totalPages}</span>
       <button
         disabled={currentPage >= totalPages}
         onClick={() => onPageChange(currentPage + 1)}
