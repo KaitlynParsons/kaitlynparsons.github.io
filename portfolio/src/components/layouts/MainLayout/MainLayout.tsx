@@ -11,7 +11,6 @@ import Navigation from "../Navigation/Navigation";
 import { useEffect, useState } from "react";
 import Coding from "../../widgets/Coding/Coding";
 import Login from "../../pages/Login/Login";
-import { NightSky } from "../NightSky/NightSky";
 
 const contact: IContact[] = [
   {
@@ -87,7 +86,6 @@ const MainLayout = () => {
       {showCoding && <Coding />}
       {showNavigation && <Navigation nav={toggleNavigation} />}
       {showNavigation && <section onClick={() => toggleNavigation()} className="sectionOverlay" />}
-      <NightSky />
       <section className="mainSection">
         <Outlet />
       </section>
