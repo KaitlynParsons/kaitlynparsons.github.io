@@ -1,6 +1,6 @@
 $mono-color-1: #340926;
-$mono-color-2: #510639;
-$mono-color-3: #ae0d7a;
+$mono-color-2: #6b0f1a;
+$mono-color-3: #b91372;
 $mono-color-4: #f033b4;
 $mono-color-5: #fddef3;
 
@@ -12,6 +12,7 @@ $complementary: #cbe432;
   white-space: pre-line;
   text-align: center;
   background-color: $mono-color-2;
+  background-image: linear-gradient(315deg, $mono-color-2 50%, $mono-color-3 100%);
   color: $mono-color-5;
   font-size: 1rem;
   font-weight: 500;
