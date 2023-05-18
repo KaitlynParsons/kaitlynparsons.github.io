@@ -3,7 +3,6 @@ import { RouterProvider, createHashRouter } from "react-router-dom";
 import MainLayout from "./components/layouts/MainLayout/MainLayout";
 import ReactGA from "react-ga4";
 import Loading from "./components/pages/Loading/Loading";
-import { NightSky } from "./components/layouts/NightSky/NightSky";
 
 const About = React.lazy(() => import("./components/pages/About/About"));
 const Garden = React.lazy(() => import("./components/pages/Garden/Garden").then(module => ({ default: module.Garden })));
@@ -58,12 +57,7 @@ const App = () => {
         }
     });
 
-    return (
-      <>
-        <NightSky />
-        <RouterProvider router={router} />
-      </>
-    );
+    return <RouterProvider router={router} />;
 }
 
 export default App;
