@@ -52,6 +52,7 @@
  
                 &.active {
                     color: index.$complementary;
+                    border-bottom: 1px solid index.$complementary;;
                 }
             }
 
