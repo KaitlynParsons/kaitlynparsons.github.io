@@ -39,6 +39,13 @@
 
 .mainSection {
     padding: 1em 0 1em 0;
+
+    > section:not(:last-child, :first-child, :nth-child(2)) {
+        padding: 4em 0;
+        margin: 4em 0;
+        border-top: 1px solid index.$mono-color-5;
+        border-bottom: 1px solid index.$mono-color-5;
+    }
 }
 
 .sectionOverlay {
