@@ -1,0 +1,61 @@
+@use "../../index.scss";
+
+.page {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  line-height: 2em;
+  gap: 0.5em;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-section {
+  letter-spacing: 0.25em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+
+  h1::first-letter {
+    color: index.$complementary;
+  }
+
+  h1 {
+    margin: 0;
+    text-transform: uppercase;
+
+    > span::first-letter {
+      color: index.$complementary;
+    }
+
+    span {
+      font-weight: lighter;
+      display: inline-block;
+    }
+  }
+}
+
+.profile {
+  height: 8em;
+  width: 8em;
+  border-radius: 8em;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-between;
+
+  a:first-child {
+    margin-left: 0;
+  }
+
+  a {
+    margin: 0 0.5em;
+  }
+
+  img {
+    cursor: pointer;
+  }
+}
