@@ -55,7 +55,11 @@
     margin: 0 0.5em;
   }
 
-  img {
+  svg {
     cursor: pointer;
+  }
+
+  svg:focus {
+    outline: none;
   }
 }

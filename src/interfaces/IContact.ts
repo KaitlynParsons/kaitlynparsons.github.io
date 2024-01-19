@@ -1,7 +1,4 @@
 export interface IContact {
-    image: {
-        link: string,
-        alt: string
-    },
+    svg: JSX.Element,
     href: string
 }
