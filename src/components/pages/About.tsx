@@ -1,7 +1,8 @@
 import "./About.scss";
 import profile from "../../assets/profile.jpg";
 import { IContact } from "../../interfaces/IContact";
-import { motion } from "framer-motion";
+import { motion, useDragControls } from "framer-motion";
+import { useRef } from "react";
 
 const contact: IContact[] = [
   {
@@ -69,9 +70,13 @@ const contact: IContact[] = [
 ];
 
 const About = () => {
+  const constraintsRef = useRef<HTMLElement | null>(null);
+  const controls = useDragControls();
+  const startDrag = (event: React.PointerEvent) => controls.start(event);
+
   return (
-    <section className="page">
-      <section className="content-section">
+    <section onPointerDown={startDrag} className="page" ref={constraintsRef}>
+      <motion.section drag dragControls={controls} dragConstraints={constraintsRef} className="content-section">
         <img className="profile" src={profile} />
         <div>
           <h1>
@@ -90,7 +95,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </section>
   );
 };
