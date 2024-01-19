@@ -14,12 +14,14 @@
 .content-section {
   letter-spacing: 0.25em;
   display: flex;
+  position: relative;
   flex-direction: column;
   gap: 1em;
   justify-content: center;
   align-items: center;
   padding: 2rem;
   height: 50vh;
+  width: 25vw;
   border: 0.1rem solid index.$complementary;
   background: linear-gradient(
     205deg,
@@ -32,7 +34,27 @@
   );
   text-align: center;
 
+  @media only screen and (max-width: 600px) {
+    width: 75vw;
+  }
+
+  button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    z-index: 1;
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    cursor: pointer;
+
+    svg:focus {
+      outline: none;
+    }
+  }
+
   div {
+    z-index: 0;
     h1::first-letter {
       color: index.$complementary;
     }

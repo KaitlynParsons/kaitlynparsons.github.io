@@ -2,8 +2,10 @@ import "./About.scss";
 import profile from "../../assets/profile.jpg";
 import { IContact } from "../../interfaces/IContact";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const complementary = "#f033b4";
+const bg = "#202124";
 
 const contact: IContact[] = [
   {
@@ -70,29 +72,91 @@ const contact: IContact[] = [
   },
 ];
 
-const About = () =>  (
+const reverseSvg = (
+  <motion.svg
+    whileHover={{ scale: 1.2, fill: bg }}
+    whileTap={{ scale: 0.8, fill: bg }}
+    style={{ x: 0 }}
+    fill="#fff"
+    height="50px"
+    width="50px"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512.002 512.002"
+  >
+    <g>
+      <g>
+        <path
+          d="M362.668,128.004H26.608c-12.382,0-23.757,8.346-26.112,20.497c-3.174,16.341,9.318,30.703,25.105,30.703h337.067
+   c2.355,0,4.267-1.911,4.267-4.267v-42.667C366.935,129.916,365.023,128.004,362.668,128.004z"
+        />
+      </g>
+    </g>
+    <g>
+      <g>
+        <path
+          d="M508.98,147.085L398.047,53.218c-2.534-2.142-6.084-2.628-9.105-1.229c-3.012,1.408-4.941,4.42-4.941,7.748v187.733
+   c0,3.328,1.929,6.34,4.941,7.74c1.152,0.538,2.372,0.794,3.593,0.794c1.98,0,3.942-0.691,5.513-2.014l110.933-93.867
+   c1.92-1.63,3.021-4.011,3.021-6.519S510.9,148.715,508.98,147.085z"
+        />
+      </g>
+    </g>
+    <g>
+      <g>
+        <path
+          d="M123.06,256.798c-3.021-1.399-6.571-0.913-9.105,1.229L3.022,351.893c-1.92,1.621-3.021,4.002-3.021,6.511
+   s1.101,4.89,3.021,6.519l110.933,93.867c1.57,1.323,3.533,2.014,5.513,2.014c1.22,0,2.441-0.256,3.593-0.794
+   c3.012-1.399,4.941-4.412,4.941-7.74V264.538C128.001,261.21,126.073,258.197,123.06,256.798z"
+        />
+      </g>
+    </g>
+    <g>
+      <g>
+        <path
+          d="M511.506,353.301c-2.364-12.151-13.739-20.497-26.112-20.497h-336.06c-2.355,0-4.267,1.911-4.267,4.267v42.667
+   c0,2.355,1.911,4.267,4.267,4.267h337.067C502.188,384.004,514.681,369.643,511.506,353.301z"
+        />
+      </g>
+    </g>
+  </motion.svg>
+);
+
+const About = () => {
+  const [showFront, setShowFront] = useState(true);
+  return (
     <section className="page">
       <motion.section className="content-section">
-        <div>
-          <img className="profile" src={profile} />
-          <h1>
-            kaitlyn<span>parsons</span>
-          </h1>
-          Software Engineer
-          <div className="icon-container">
-            <div>
-              {contact.map((detail, index) => {
-                return (
-                  <a key={index} href={detail.href} target="_blank">
-                    {detail.svg}
-                  </a>
-                );
-              })}
+        <button onClick={() => setShowFront(!showFront)}>{reverseSvg}</button>
+        {showFront && (
+          <div>
+            <img className="profile" src={profile} />
+            <h1>
+              kaitlyn<span>parsons</span>
+            </h1>
+            Software Engineer
+            <div className="icon-container">
+              <div>
+                {contact.map((detail, index) => {
+                  return (
+                    <a key={index} href={detail.href} target="_blank">
+                      {detail.svg}
+                    </a>
+                  );
+                })}
+              </div>
             </div>
           </div>
-        </div>
+        )}
+        {!showFront && (
+          <div>
+            I am very passionate about technology and software development with
+            a focus on writing secure, clean, efficient and reusable code. I
+            continuously aim to challenge myself and improve my skill set with
+            industry experience and personal projects.
+          </div>
+        )}
       </motion.section>
     </section>
   );
+};
 
 export default About;
