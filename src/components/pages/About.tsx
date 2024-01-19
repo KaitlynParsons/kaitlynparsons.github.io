@@ -1,15 +1,16 @@
 import "./About.scss";
 import profile from "../../assets/profile.jpg";
 import { IContact } from "../../interfaces/IContact";
-import { motion, useDragControls } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
+
+const complementary = "#f033b4";
 
 const contact: IContact[] = [
   {
     svg: (
       <motion.svg
-        whileHover={{ scale: 1.2, fill: "#f033b4", stroke: "#f033b4" }}
-        whileTap={{ scale: 0.8, fill: "#f033b4", stroke: "#f033b4" }}
+        whileHover={{ scale: 1.2, fill: complementary, stroke: complementary }}
+        whileTap={{ scale: 0.8, fill: complementary, stroke: complementary }}
         style={{ x: 0 }}
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
@@ -36,8 +37,8 @@ const contact: IContact[] = [
   {
     svg: (
       <motion.svg
-        whileHover={{ scale: 1.2, fill: "#f033b4" }}
-        whileTap={{ scale: 0.8, fill: "#f033b4" }}
+        whileHover={{ scale: 1.2, fill: complementary }}
+        whileTap={{ scale: 0.8, fill: complementary }}
         style={{ x: 0 }}
         xmlns="http://www.w3.org/2000/svg"
         fill="#fff"
@@ -53,8 +54,8 @@ const contact: IContact[] = [
   {
     svg: (
       <motion.svg
-        whileHover={{ scale: 1.2, fill: "#f033b4" }}
-        whileTap={{ scale: 0.8, fill: "#f033b4" }}
+        whileHover={{ scale: 1.2, fill: complementary }}
+        whileTap={{ scale: 0.8, fill: complementary }}
         style={{ x: 0 }}
         xmlns="http://www.w3.org/2000/svg"
         fill="#fff"
@@ -69,16 +70,11 @@ const contact: IContact[] = [
   },
 ];
 
-const About = () => {
-  const constraintsRef = useRef<HTMLElement | null>(null);
-  const controls = useDragControls();
-  const startDrag = (event: React.PointerEvent) => controls.start(event);
-
-  return (
-    <section onPointerDown={startDrag} className="page" ref={constraintsRef}>
-      <motion.section drag dragControls={controls} dragConstraints={constraintsRef} className="content-section">
-        <img className="profile" src={profile} />
+const About = () =>  (
+    <section className="page">
+      <motion.section className="content-section">
         <div>
+          <img className="profile" src={profile} />
           <h1>
             kaitlyn<span>parsons</span>
           </h1>
@@ -98,6 +94,5 @@ const About = () => {
       </motion.section>
     </section>
   );
-};
 
 export default About;
