@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Outlet, RouterProvider, createHashRouter } from "react-router-dom";
 import ReactGA from "react-ga4";
 
-const About = React.lazy(() => import("./components/pages/About"));
+const Home = React.lazy(() => import("./components/pages/Home"));
 
 const router = createHashRouter([
   {
@@ -13,7 +13,7 @@ const router = createHashRouter([
         path: "",
         element: (
           <React.Suspense fallback={<>Loading...</>}>
-            <About />
+            <Home />
           </React.Suspense>
         ),
       },

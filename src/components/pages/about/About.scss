@@ -1,0 +1,46 @@
+@use "../../../index.scss";
+
+div {
+  z-index: 0;
+  h1::first-letter {
+    color: index.$complementary;
+  }
+
+  h1 {
+    margin: 0;
+    text-transform: uppercase;
+
+    > span::first-letter {
+      color: index.$complementary;
+    }
+
+    span {
+      font-weight: lighter;
+      display: inline-block;
+    }
+  }
+}
+
+.profile {
+  height: 8em;
+  width: 8em;
+  border-radius: 8em;
+}
+
+.icon-container {
+  a:first-child {
+    margin-left: 0;
+  }
+
+  a {
+    margin: 0 0.5em;
+  }
+
+  svg {
+    cursor: pointer;
+  }
+
+  svg:focus {
+    outline: none;
+  }
+}

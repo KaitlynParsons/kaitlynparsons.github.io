@@ -18,6 +18,7 @@ $bg: #202124;
 
 html, body {
   display: flex;
+  overflow-x: hidden;
 }
 body, #root {
   margin: 0;

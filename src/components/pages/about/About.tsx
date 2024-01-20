@@ -1,8 +1,9 @@
 import "./About.scss";
-import profile from "../../assets/profile.jpg";
-import { IContact } from "../../interfaces/IContact";
+import profile from "../../../assets/profile.jpg";
+import { IContact } from "../../../interfaces/IContact";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import Card from "../../layout/Card";
 
 const complementary = "#f033b4";
 const bg = "#202124";
@@ -129,8 +130,8 @@ const animateProps = {
 const About = () => {
   const [showFront, setShowFront] = useState(true);
   return (
-    <section className="page">
-      <motion.section className="content-section">
+    <Card>
+      <>
         <button onClick={() => setShowFront(!showFront)}>{reverseSvg}</button>
         <AnimatePresence mode="wait">
           {showFront && (
@@ -162,8 +163,8 @@ const About = () => {
             </motion.div>
           )}
         </AnimatePresence>
-      </motion.section>
-    </section>
+      </>
+    </Card>
   );
 };
 
