@@ -1,7 +1,7 @@
 import "./About.scss";
 import profile from "../../assets/profile.jpg";
 import { IContact } from "../../interfaces/IContact";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
 const complementary = "#f033b4";
@@ -120,40 +120,48 @@ const reverseSvg = (
   </motion.svg>
 );
 
+const animateProps = {
+  initial: { opacity: 1 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+};
+
 const About = () => {
   const [showFront, setShowFront] = useState(true);
   return (
     <section className="page">
       <motion.section className="content-section">
         <button onClick={() => setShowFront(!showFront)}>{reverseSvg}</button>
-        {showFront && (
-          <div>
-            <img className="profile" src={profile} />
-            <h1>
-              kaitlyn<span>parsons</span>
-            </h1>
-            Software Engineer
-            <div className="icon-container">
-              <div>
-                {contact.map((detail, index) => {
-                  return (
-                    <a key={index} href={detail.href} target="_blank">
-                      {detail.svg}
-                    </a>
-                  );
-                })}
+        <AnimatePresence mode="wait">
+          {showFront && (
+            <motion.div key="front" {...animateProps}>
+              <img className="profile" src={profile} />
+              <h1>
+                kaitlyn<span>parsons</span>
+              </h1>
+              Software Engineer
+              <div className="icon-container">
+                <div>
+                  {contact.map((detail, index) => {
+                    return (
+                      <a key={index} href={detail.href} target="_blank">
+                        {detail.svg}
+                      </a>
+                    );
+                  })}
+                </div>
               </div>
-            </div>
-          </div>
-        )}
-        {!showFront && (
-          <div>
-            I am very passionate about technology and software development with
-            a focus on writing secure, clean, efficient and reusable code. I
-            continuously aim to challenge myself and improve my skill set with
-            industry experience and personal projects.
-          </div>
-        )}
+            </motion.div>
+          )}
+          {!showFront && (
+            <motion.div key="back" {...animateProps}>
+              I am very passionate about technology and software development
+              with a focus on writing secure, clean, efficient and reusable
+              code. I continuously aim to challenge myself and improve my skill
+              set with industry experience and personal projects.
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.section>
     </section>
   );
