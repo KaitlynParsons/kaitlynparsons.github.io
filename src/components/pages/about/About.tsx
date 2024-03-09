@@ -2,8 +2,9 @@ import "./About.scss";
 import profile from "../../../assets/profile.jpg";
 import { IContact } from "../../../interfaces/IContact";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Card from "../../layout/Card";
+import { AboutContext } from "../../../context/AboutContext";
 
 const complementary = "#f033b4";
 const bg = "#202124";
@@ -128,6 +129,7 @@ const animateProps = {
 };
 
 const About = () => {
+  const {firstName, lastName, title, about} = useContext(AboutContext);
   const [showFront, setShowFront] = useState(true);
   return (
     <Card>
@@ -138,9 +140,9 @@ const About = () => {
             <motion.div key="front" {...animateProps}>
               <img className="profile" src={profile} />
               <h1>
-                kaitlyn<span>parsons</span>
+                {firstName}<span>{lastName}</span>
               </h1>
-              Software Engineer
+              {title}
               <div className="icon-container">
                 <div>
                   {contact.map((detail, index) => {
@@ -155,12 +157,7 @@ const About = () => {
             </motion.div>
           )}
           {!showFront && (
-            <motion.div key="back" {...animateProps}>
-              I am very passionate about technology and software development
-              with a focus on writing secure, clean, efficient and reusable
-              code. I continuously aim to challenge myself and improve my skill
-              set with industry experience and personal projects.
-            </motion.div>
+            <motion.div key="back" {...animateProps}>{about}</motion.div>
           )}
         </AnimatePresence>
       </>
